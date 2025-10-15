@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,23 @@
     <title>Document</title>
 </head>
 <body>
+    <div>
+        <!-- navigation section -->
+        <section id ='navigation'>
+            
+<script>
+    // Load nav.html into this page
+    fetch("nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav").innerHTML = data;
+      });
+      </script>
+  <!-- Placeholder for nav -->
+  <div id="nav"></div>
+
+        </section>
+            <!-- end  of  navigation  section -->
     <div>
         <!--header section -->
         <section id ="header">
@@ -26,49 +44,72 @@
    <div>
     <!--about section-->
     <section id="about">
-        <h1>about us </h1>
-    <dialog id="aboutDialog" open  >
-    <pre>     MLR Institute of Technology is known for its integrated curriculum
-    with equal importance to academics, employable skills & sports.
-    MLR Institute of Technology (MLRIT) is located at Dundigal, Hyderabad, Telangana, India.
-    The institution was started in 2005 by the KMR Education Trust, headed by Mr. Marri Laxman Reddy. 
-    the Institute has Eleven UG courses along with Five PG Courses.
-    The Institute is affiliated with Jawaharlal Nehru Technological University, Hyderabad (JNTUH).
-    It was granted Autonomous status by University Grants Commission (India) in the year 2015.</pre> 
-    <a href="https://mlrit.ac.in/">
-    <button>about us </button>
-    </a>
-    </dialog>
-
+        <h1>About us </h1>
         <p>
+            Atal Innovation Mission (AIM) at NITI Aayog is mandated to promote a culture of innovation and entrepreneurship in India. AIM has selected a number of institutions for supporting them in establishing the Atal Community Innovation Centers (ACICs). CBIT has been selected from Telangana by AIM and received approval for the establishment of Atal Community Innovation Centre (ACIC) at CBIT Campus. ACIC-CBIT Research and Entrepreneurship Foundation, a registered section 8 company, is a Special Purpose Vehicle (SPV) promoted by CBIT. ACIC-CBIT provides requisite infrastructure and resources for innovators in the unserved / underserved regions.
+
+ACIC-CBIT aligns their activities to engage a large number of grassroot innovators, communities, students and academicians in various innovation and entrepreneurship related activities such as ideation, Problem solving, Proof of Concept development, Design Thinking, IPR etc. The ACIC-CBIT will connect with other stakeholders at various platforms to accelerate the implementation of the activities under ACIC-CBIT
+        </p>
 
         </section>
+  
         <!--end of about section-->
     </div>
-    <br>
-     <div>
-        <!--service section -->
-        <section id ="serivce">
-            <h2>
-                 academics 
-            </h2>
+     <!-- our vision and mission  section -->
+        <section id ="vision">
+            <h2> Our Vision</h2>
+                
             <p>
-
+ACIC CBIT vision is to encourage a spirit of entrepreneurship in the underserved/unserved regions by providing enabling infrastructure and facilitating an environment for innovations.
             </p>
+  <h2> Our Mission </h2>
+                
+            <p>
+To provide directional training and mentorship with infrastructural and Adoptive Innovation frameworks for the innovators to offer cost-effective, sustainable solutions for societal problems by targeting to achieve Sustainable Development Goals (SDGs). Innovation Center will serve as an operational knowledge and resource catalyst for the Innovators to develop into promising entrepreneurs to address the emergent need of the community by providing local innovative and scalable solutions.
+            </p>
+
+</section>
+    </div>
+     <br>
+     <div>
+        <!--Objectives section -->
+        <section id ="Objectives">
+            <h2>
+               Our Objectives
+            </h2>
+            <pre>
+ACIC CBIT vision is to encourage a spirit of entrepreneurship in the underserved/unserved regions by providing enabling infrastructure and facilitating an environment for innovations
+
+To build an Innovative mindset and the need for entrepreneurship among the community.
+To enhance the domain knowledge, skills and attitudes (K-S-A) to develop innovative products and services.
+To promote design thinking processes among the community and provide the necessary infrastructure support for building prototypes and MVP.
+To build a vibrant startup ecosystem, by establishing a network between academia, industries, incubation centers, financial institutions, Government and other stakeholders.
+To build the sector specific Expert Mentor pool from academia and industry to provide expert opinions and suggestions to Innovators/startups.
+To provide necessary support services, such as Legal, IPR, Funding and Market Access to help innovators become sustainable startups
+            </pre>
 
 </section>
     </div>
 
     <div>
-        <!--course offered section-->
-        <section id ="course">
+        <!-- sdgb goals section-->
+        <section id ="sdg">
+            <h2>Targeted SDG's</h2>
+            <p>We support ideas and innovations working toward the Sustainable
+Development Goals (SDG's)</p>
+<img src="sdg.jpg" alt="sdg-goals" width="800px" height="400px">
         </section>
     </div>
-
     <div>
         <!--gallery section -->
         <setion id ="gallery">
 
+            <h2>ACIC - CBIT's Ledaership Team</h2>
+            <h2>CORE Team of ACIC</h2>
+            <h2>ACIC - CBIT's Advisory Committee</h2>
+            <p>
+Committed to fostering innovation within unserved and underserved communities, the mission of ACIC-CBIT is to promote and nurture start-ups by offering community innovation training, providing technical assistance and necessary infrastructure in its incubation centre for harnessing the creative ideas and innovative thoughts of young entrepreneurs. The Advisory Committee is comprised of accomplished individuals who have demonstrated a deep understanding of community-driven innovation, capacity-building, industry, business, and social transformation
+            </p>
         </setion>
     <!--end of gallery section-->
     </div>
@@ -97,11 +138,120 @@
             <p>
                 &copy 2024 all right reserved 
             </p>
+            <script>
+    // Load nav.html into this page
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+      </script>
 
          </section>
          <!-- end of  footer section -->
     </div>
     <!-- HTML -->
+    <!-- End HTML -->
+           <style>
+            #about {
+                margin-left: 5px;
+                margin-right: 5px;
+                padding: 10px;
+h1{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkblue;
+
+}
+            }
+            #vision {
+                margin-left: 5px;
+                margin-right: 5px;
+                padding: 10px;
+                h2{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkblue;
+                }
+
+            }
+#Objectives{
+                margin-left: 5px;
+                margin-right:5px;
+                padding: 10px;
+                h2{
+    text-align:center;       
+    text-decoration:underline;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkblue;
+                }
+                pre{
+                    font-size: 20px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    color: black;
+                }
+
+            }
+#sdg {
+                margin-left: 5px;
+                margin-right: 5px;
+                padding: 10px;
+                h2{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkblue;
+                }
+                p{
+                    font-size: 20px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    color: black;
+                }
+
+            }
+#gallery {
+                margin-left: 5px;
+                margin-right: 5px;
+                padding: 10px;
+                h2{
+    text-align: center;
+    text-decoration: underline; 
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkblue;
+                }
+                p{
+                    font-size: 20px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    color: black;
+                }
+
+            }
+#contact {
+                margin-left: 5px;
+                margin-right: 5px;
+                padding: 10px;
+                h3{
+    text-align: center;
+    text-decoration: underline; 
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkblue;
+                }
+                p{
+                    font-size: 20px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    color: black;
+                }
+
+            }
+        </style>
 
 
 

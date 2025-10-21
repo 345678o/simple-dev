@@ -9,11 +9,121 @@
     <div>
         <!-- navigation section -->
         <section id ='navigation'>
-
+            <div id="nav"></div>
+            <script>
+                // Load nav.html into this page
+                fetch("nav.html")
+                  .then(response => response.text())
+                  .then(data => {
+                    document.getElementById("nav").innerHTML = data;
+                  });
+            </script>
         </section>
             <!-- end  of  navigation  section -->
     </div>
-    
+      
+    <div>
+        <style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #ffecec; /* light pink background */
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+  }
+
+  .partners-section {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+  }
+
+  .partners-section h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #111;
+  }
+
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .partners-container {
+    overflow: hidden;
+    width: 80%;
+  }
+
+  .partner-tab {
+    display: flex;
+    gap: 10px;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .partner-tab img {
+    max-width: 150px;
+    max-height: 100px;
+    object-fit: contain;
+    margin: 5px;
+  }
+
+  .arrow {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    transition: background 0.3s;
+  }
+
+  .arrow:hover {
+    background-color: #f0f0f0;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="partners-section">
+  <h2>Our Partners</h2>
+  <div class="carousel-container">
+    <button class="arrow left-arrow">&larr;</button>
+    <div class="partners-container">
+      <div class="partner-tab">
+        <img src="images.jpeg" alt="Navam Logo">
+        <img src="images-4.jpeg" alt="Navam Logo">
+        <img src="images-3.jpeg" alt="Navam Logo">
+        <img src="mlrit 2.jpeg" alt="mlrit 2 Logo">
+        <img src="MLRIT-1.jpg" alt="TIF Logo">
+      </div>
+    </div>
+    <button class="arrow right-arrow">&rarr;</button>
+  </div>
+</div>
+
+<script>
+  const partnerTab = document.querySelector('.partner-tab');
+  const leftArrow = document.querySelector('.left-arrow');
+  const rightArrow = document.querySelector('.right-arrow');
+
+  let scrollPosition = 0;
+  const scrollAmount = 200; // Adjust this value for the scroll distance
+
+  leftArrow.addEventListener('click', () => {
+    scrollPosition = Math.min(scrollPosition + scrollAmount, 0);
+    partnerTab.style.transform = `translateX(${scrollPosition}px)`;
+  });
+
+  rightArrow.addEventListener('click', () => {
+    const maxScroll = -(partnerTab.scrollWidth - partnerTab.parentElement.offsetWidth);
+    scrollPosition = Math.max(scrollPosition - scrollAmount, maxScroll);
+    partnerTab.style.transform = `translateX(${scrollPosition}px)`;
+  });
+</script>
+    </div>
         <div>
             <!-- footer section -->
             <section id ="footer">

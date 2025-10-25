@@ -10,21 +10,11 @@
     <div>
         <!-- navigation section -->
         <section id ='navigation'>
-            
-<script>
-    // Load nav.html into this page
-    fetch("nav.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("nav").innerHTML = data;
-      });
-      </script>
   <!-- Placeholder for nav -->
   <div id="nav"></div>
-
         </section>
             <!-- end  of  navigation  section -->
-    <div>
+    </div>
         <!--header section -->
         <section id="header">
             <!-- Image Slider -->
@@ -52,16 +42,53 @@
    <div>
     <!--about section-->
     <section id="about">
-        <h1>About us </h1>
-        <p>
-            Atal Innovation Mission (AIM) at NITI Aayog is mandated to promote a culture of innovation and entrepreneurship in India. AIM has selected a number of institutions for supporting them in establishing the Atal Community Innovation Centers (ACICs). CBIT has been selected from Telangana by AIM and received approval for the establishment of Atal Community Innovation Centre (ACIC) at CBIT Campus. ACIC-CBIT Research and Entrepreneurship Foundation, a registered section 8 company, is a Special Purpose Vehicle (SPV) promoted by CBIT. ACIC-CBIT provides requisite infrastructure and resources for innovators in the unserved / underserved regions.
+        <div class="about-container">
+            <h1>About ACIC-CBIT</h1>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        Atal Innovation Mission (AIM) at NITI Aayog is mandated to promote a culture of innovation and entrepreneurship in India. AIM has selected a number of institutions for supporting them in establishing the Atal Community Innovation Centers (ACICs). CBIT has been selected from Telangana by AIM and received approval for the establishment of Atal Community Innovation Centre (ACIC) at CBIT Campus.
+                    </p>
+                    
+                    <p>
+                        ACIC-CBIT Research and Entrepreneurship Foundation, a registered section 8 company, is a Special Purpose Vehicle (SPV) promoted by CBIT. ACIC-CBIT provides requisite infrastructure and resources for innovators in the unserved / underserved regions.
+                    </p>
 
-ACIC-CBIT aligns their activities to engage a large number of grassroot innovators, communities, students and academicians in various innovation and entrepreneurship related activities such as ideation, Problem solving, Proof of Concept development, Design Thinking, IPR etc. The ACIC-CBIT will connect with other stakeholders at various platforms to accelerate the implementation of the activities under ACIC-CBIT
-        </p>
-
-        </section>
+                    <p>
+                        ACIC-CBIT aligns their activities to engage a large number of grassroot innovators, communities, students and academicians in various innovation and entrepreneurship related activities such as ideation, Problem solving, Proof of Concept development, Design Thinking, IPR etc. The ACIC-CBIT will connect with other stakeholders at various platforms to accelerate the implementation of the activities under ACIC-CBIT.
+                    </p>
+                </div>
+                
+                <div class="about-features">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Innovation Hub</h3>
+                        <p>State-of-the-art facilities for fostering innovation and creativity</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Community Focus</h3>
+                        <p>Serving unserved and underserved regions with targeted solutions</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🤝</div>
+                        <h3>Stakeholder Network</h3>
+                        <p>Connecting innovators with industry, academia, and government</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">💡</div>
+                        <h3>Design Thinking</h3>
+                        <p>Promoting human-centered design approaches for problem solving</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
   
-        <!--end of about section-->
+    <!--end of about section-->
     </div>
      <!-- our vision and mission  section -->
         <section id ="vision">
@@ -121,7 +148,102 @@ Committed to fostering innovation within unserved and underserved communities, t
         </setion>
     <!--end of gallery section-->
     </div>
-      <div>
+    
+    <div>
+        <!-- Video Testimonials section -->
+        <section id="video-testimonials">
+            <h2>Video Testimonials</h2>
+            <p>Hear from our successful entrepreneurs and innovators who have transformed their ideas into reality with ACIC-CBIT.</p>
+            
+            <div class="testimonials-container">
+                <div class="testimonial-video active" data-video="testimonial1">
+                    <div class="video-wrapper">
+                        <video controls poster="testimonial1-poster.jpg">
+                            <source src="testimonial1.mp4" type="video/mp4">
+                            <source src="testimonial1.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay">
+                            <button class="play-button" onclick="togglePlay(this)">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <h3>Sarah Johnson</h3>
+                        <p class="testimonial-role">Founder, TechInnovate Solutions</p>
+                        <p class="testimonial-text">"ACIC-CBIT provided us with the perfect ecosystem to grow our startup. The mentorship and resources available here are exceptional. We went from idea to market in just 8 months!"</p>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-video" data-video="testimonial2">
+                    <div class="video-wrapper">
+                        <video controls poster="testimonial2-poster.jpg">
+                            <source src="testimonial2.mp4" type="video/mp4">
+                            <source src="testimonial2.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay">
+                            <button class="play-button" onclick="togglePlay(this)">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <h3>Rajesh Kumar</h3>
+                        <p class="testimonial-role">CEO, GreenTech Innovations</p>
+                        <p class="testimonial-text">"The incubation program at ACIC-CBIT changed everything for us. The guidance from experienced mentors and access to state-of-the-art facilities helped us scale our sustainable technology solutions."</p>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-video" data-video="testimonial3">
+                    <div class="video-wrapper">
+                        <video controls poster="testimonial3-poster.jpg">
+                            <source src="testimonial3.mp4" type="video/mp4">
+                            <source src="testimonial3.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay">
+                            <button class="play-button" onclick="togglePlay(this)">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <h3>Priya Sharma</h3>
+                        <p class="testimonial-role">Co-founder, EduTech Solutions</p>
+                        <p class="testimonial-text">"Being part of the ACIC-CBIT community has been transformative. The networking opportunities and collaborative environment helped us build partnerships that were crucial for our success."</p>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-navigation">
+                <button class="nav-btn prev-btn" onclick="changeTestimonial(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="testimonial-dots">
+                    <span class="dot active" onclick="currentTestimonial(1)"></span>
+                    <span class="dot" onclick="currentTestimonial(2)"></span>
+                    <span class="dot" onclick="currentTestimonial(3)"></span>
+                </div>
+                <button class="nav-btn next-btn" onclick="changeTestimonial(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+        <!-- end of Video Testimonials section -->
+    </div>
+    
+    <div>
         <!--  awards section -->
          <section id ="awards">
 
@@ -143,21 +265,12 @@ Committed to fostering innovation within unserved and underserved communities, t
     <div>
         <!-- footer section -->
          <section id ="footer">
-            <p>
-                &copy 2024 all right reserved 
-            </p>
-            <script>
-    // Load nav.html into this page
-    fetch("footer.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("footer").innerHTML = data;
-      });
-      </script>
-
+            <!-- Placeholder for footer -->
+            <div id="footer-content"></div>
          </section>
          <!-- end of  footer section -->
     </div>
+    
     <!-- Slider JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -322,11 +435,11 @@ Committed to fostering innovation within unserved and underserved communities, t
                 padding: 0;
                 box-sizing: border-box;
                 font-family: Arial, Helvetica, sans-serif;
-            }
+            } 
 
             section {
                 padding: 20px;
-                margin: 0 auto;
+                margin: 0 auto; 
                 max-width: 1200px;
                 width: 90%;
             }
@@ -363,8 +476,439 @@ Committed to fostering innovation within unserved and underserved communities, t
             }
 
             /* Section specific styles */
-            #about, #vision, #Objectives, #sdg, #gallery, #contact {
+            #about, #vision, #Objectives, #sdg, #gallery, #video-testimonials, #contact {
                 margin-bottom: 40px;
+            }
+
+            /* About Section Styles */
+            #about {
+                background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+                border-radius: 20px;
+                padding: 50px 30px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                margin: 40px auto;
+            }
+
+            .about-container {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            #about h1 {
+                color: #2c3e50;
+                font-size: 3em;
+                margin-bottom: 30px;
+                text-align: center;
+                position: relative;
+            }
+
+            #about h1::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100px;
+                height: 4px;
+                background: linear-gradient(90deg, #e53935, #ff6b6b);
+                border-radius: 2px;
+            }
+
+            .about-content {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                gap: 50px;
+                align-items: start;
+            }
+
+            .about-text {
+                background: white;
+                padding: 40px;
+                border-radius: 15px;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            }
+
+            .about-intro {
+                font-size: 1.2em;
+                font-weight: 600;
+                color: #2c3e50;
+                margin-bottom: 25px;
+                line-height: 1.8;
+            }
+
+            .about-text p {
+                font-size: 1.1em;
+                line-height: 1.7;
+                color: #555;
+                margin-bottom: 20px;
+            }
+
+            .about-features {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .feature-card {
+                background: white;
+                padding: 25px;
+                border-radius: 15px;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+                text-align: center;
+                transition: all 0.3s ease;
+                border: 2px solid transparent;
+            }
+
+            .feature-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+                border-color: #e53935;
+            }
+
+            .feature-icon {
+                font-size: 3em;
+                margin-bottom: 15px;
+                display: block;
+            }
+
+            .feature-card h3 {
+                color: #2c3e50;
+                font-size: 1.3em;
+                margin-bottom: 10px;
+                text-decoration: none;
+            }
+
+            .feature-card p {
+                color: #666;
+                font-size: 0.95em;
+                line-height: 1.5;
+                margin: 0;
+            }
+
+            /* About Section Responsive Styles */
+            @media screen and (max-width: 1024px) {
+                .about-content {
+                    grid-template-columns: 1fr;
+                    gap: 30px;
+                }
+
+                .about-features {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                #about {
+                    padding: 30px 20px;
+                }
+
+                #about h1 {
+                    font-size: 2.5em;
+                }
+
+                .about-text {
+                    padding: 25px;
+                }
+
+                .about-features {
+                    grid-template-columns: 1fr;
+                }
+
+                .feature-card {
+                    padding: 20px;
+                }
+            }
+
+            @media screen and (max-width: 480px) {
+                #about {
+                    padding: 20px 15px;
+                }
+
+                #about h1 {
+                    font-size: 2em;
+                }
+
+                .about-text {
+                    padding: 20px;
+                }
+
+                .about-intro {
+                    font-size: 1.1em;
+                }
+
+                .about-text p {
+                    font-size: 1em;
+                }
+            }
+
+            /* Video Testimonials Styles */
+            #video-testimonials {
+                background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+                border-radius: 20px;
+                padding: 40px 20px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            }
+
+            #video-testimonials h2 {
+                color: #2c3e50;
+                margin-bottom: 15px;
+                font-size: 2.5em;
+            }
+
+            #video-testimonials > p {
+                text-align: center;
+                font-size: 1.2em;
+                color: #6c757d;
+                margin-bottom: 40px;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .testimonials-container {
+                position: relative;
+                max-width: 1000px;
+                margin: 0 auto;
+                overflow: hidden;
+                border-radius: 15px;
+            }
+
+            .testimonial-video {
+                display: none;
+                background: white;
+                border-radius: 15px;
+                box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+                overflow: hidden;
+                transition: all 0.3s ease;
+            }
+
+            .testimonial-video.active {
+                display: block;
+                animation: fadeIn 0.5s ease-in-out;
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            .video-wrapper {
+                position: relative;
+                width: 100%;
+                height: 300px;
+                background: #000;
+                border-radius: 15px 15px 0 0;
+                overflow: hidden;
+            }
+
+            .video-wrapper video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .video-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0,0,0,0.3);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 1;
+                transition: opacity 0.3s ease;
+            }
+
+            .video-overlay.hidden {
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            .play-button {
+                background: rgba(255,255,255,0.9);
+                border: none;
+                border-radius: 50%;
+                width: 80px;
+                height: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            }
+
+            .play-button:hover {
+                background: white;
+                transform: scale(1.1);
+                box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            }
+
+            .play-button i {
+                font-size: 24px;
+                color: #e53935;
+                margin-left: 4px;
+            }
+
+            .testimonial-content {
+                padding: 30px;
+                text-align: center;
+            }
+
+            .testimonial-content h3 {
+                color: #2c3e50;
+                font-size: 1.8em;
+                margin-bottom: 8px;
+                font-weight: 700;
+            }
+
+            .testimonial-role {
+                color: #e53935;
+                font-size: 1.1em;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+
+            .testimonial-text {
+                font-size: 1.1em;
+                line-height: 1.6;
+                color: #555;
+                font-style: italic;
+                margin-bottom: 20px;
+                max-width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .rating {
+                margin-top: 15px;
+            }
+
+            .stars {
+                color: #ffc107;
+                font-size: 1.5em;
+                text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            }
+
+            .testimonial-navigation {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                margin-top: 30px;
+            }
+
+            .nav-btn {
+                background: #e53935;
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 15px rgba(229,57,53,0.3);
+            }
+
+            .nav-btn:hover {
+                background: #c62828;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(229,57,53,0.4);
+            }
+
+            .nav-btn:disabled {
+                background: #ccc;
+                cursor: not-allowed;
+                transform: none;
+                box-shadow: none;
+            }
+
+            .testimonial-dots {
+                display: flex;
+                gap: 10px;
+            }
+
+            .dot {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: #ddd;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .dot.active {
+                background: #e53935;
+                transform: scale(1.2);
+            }
+
+            .dot:hover {
+                background: #e53935;
+                transform: scale(1.1);
+            }
+
+            /* Video Testimonials Responsive Styles */
+            @media screen and (max-width: 768px) {
+                #video-testimonials {
+                    padding: 30px 15px;
+                }
+
+                #video-testimonials h2 {
+                    font-size: 2em;
+                }
+
+                .video-wrapper {
+                    height: 250px;
+                }
+
+                .play-button {
+                    width: 60px;
+                    height: 60px;
+                }
+
+                .play-button i {
+                    font-size: 20px;
+                }
+
+                .testimonial-content {
+                    padding: 20px;
+                }
+
+                .testimonial-content h3 {
+                    font-size: 1.5em;
+                }
+
+                .testimonial-text {
+                    font-size: 1em;
+                }
+
+                .nav-btn {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            @media screen and (max-width: 480px) {
+                #video-testimonials {
+                    padding: 20px 10px;
+                }
+
+                .video-wrapper {
+                    height: 200px;
+                }
+
+                .testimonial-content {
+                    padding: 15px;
+                }
+
+                .testimonial-navigation {
+                    gap: 15px;
+                }
             }
 
             /* Responsive styles */
@@ -395,7 +939,176 @@ Committed to fostering innovation within unserved and underserved communities, t
             }
         </style>
 
+    <!-- Load Navigation and Footer -->
+    <script>
+        // Load nav.html into this page
+        fetch("nav.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("nav").innerHTML = data;
+          })
+          .catch(error => console.error('Error loading navigation:', error));
 
+        // Load footer.html into this page
+        fetch("footer.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("footer-content").innerHTML = data;
+          })
+          .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+    <!-- Video Testimonials JavaScript -->
+    <script>
+        let currentTestimonialIndex = 0;
+        const testimonials = document.querySelectorAll('.testimonial-video');
+        const dots = document.querySelectorAll('.dot');
+        const totalTestimonials = testimonials.length;
+
+        // Initialize testimonials
+        function initTestimonials() {
+            showTestimonial(0);
+            updateNavigationButtons();
+        }
+
+        // Show specific testimonial
+        function showTestimonial(index) {
+            // Hide all testimonials
+            testimonials.forEach(testimonial => {
+                testimonial.classList.remove('active');
+            });
+            
+            // Remove active class from all dots
+            dots.forEach(dot => {
+                dot.classList.remove('active');
+            });
+            
+            // Show current testimonial
+            if (testimonials[index]) {
+                testimonials[index].classList.add('active');
+            }
+            
+            // Activate corresponding dot
+            if (dots[index]) {
+                dots[index].classList.add('active');
+            }
+            
+            currentTestimonialIndex = index;
+            updateNavigationButtons();
+        }
+
+        // Change testimonial (next/previous)
+        function changeTestimonial(direction) {
+            let newIndex = currentTestimonialIndex + direction;
+            
+            if (newIndex >= totalTestimonials) {
+                newIndex = 0;
+            } else if (newIndex < 0) {
+                newIndex = totalTestimonials - 1;
+            }
+            
+            showTestimonial(newIndex);
+        }
+
+        // Go to specific testimonial
+        function currentTestimonial(index) {
+            showTestimonial(index - 1); // Convert to 0-based index
+        }
+
+        // Update navigation buttons state
+        function updateNavigationButtons() {
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            
+            if (prevBtn && nextBtn) {
+                prevBtn.disabled = false;
+                nextBtn.disabled = false;
+            }
+        }
+
+        // Toggle video play/pause
+        function togglePlay(button) {
+            const videoWrapper = button.closest('.video-wrapper');
+            const video = videoWrapper.querySelector('video');
+            const overlay = videoWrapper.querySelector('.video-overlay');
+            const playIcon = button.querySelector('i');
+            
+            if (video.paused) {
+                video.play();
+                overlay.classList.add('hidden');
+                playIcon.className = 'fas fa-pause';
+            } else {
+                video.pause();
+                overlay.classList.remove('hidden');
+                playIcon.className = 'fas fa-play';
+            }
+        }
+
+        // Auto-play next testimonial (optional)
+        function autoPlayTestimonials() {
+            setInterval(() => {
+                changeTestimonial(1);
+            }, 10000); // Change every 10 seconds
+        }
+
+        // Pause all videos when switching testimonials
+        function pauseAllVideos() {
+            const videos = document.querySelectorAll('.testimonial-video video');
+            videos.forEach(video => {
+                video.pause();
+                const overlay = video.closest('.video-wrapper').querySelector('.video-overlay');
+                const playButton = overlay.querySelector('.play-button i');
+                if (overlay && playButton) {
+                    overlay.classList.remove('hidden');
+                    playButton.className = 'fas fa-play';
+                }
+            });
+        }
+
+        // Enhanced showTestimonial function with video pause
+        function showTestimonial(index) {
+            pauseAllVideos(); // Pause all videos first
+            
+            // Hide all testimonials
+            testimonials.forEach(testimonial => {
+                testimonial.classList.remove('active');
+            });
+            
+            // Remove active class from all dots
+            dots.forEach(dot => {
+                dot.classList.remove('active');
+            });
+            
+            // Show current testimonial
+            if (testimonials[index]) {
+                testimonials[index].classList.add('active');
+            }
+            
+            // Activate corresponding dot
+            if (dots[index]) {
+                dots[index].classList.add('active');
+            }
+            
+            currentTestimonialIndex = index;
+            updateNavigationButtons();
+        }
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            initTestimonials();
+            // Uncomment the line below to enable auto-play
+            // autoPlayTestimonials();
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') {
+                changeTestimonial(-1);
+            } else if (e.key === 'ArrowRight') {
+                changeTestimonial(1);
+            }
+        });
+    </script>
 
 </body>
 </html>

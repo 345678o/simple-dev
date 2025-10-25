@@ -9,7 +9,8 @@
     <div>
         <!-- navigation section -->
         <section id ='navigation'>
-
+  <!-- Placeholder for nav -->
+  <div id="nav"></div>
         </section>
             <!-- end  of  navigation  section -->
     </div>
@@ -20,7 +21,9 @@
                 About Us 
             </h1>
             <p>
+Atal Innovation Mission (AIM) at NITI Aayog is mandated to promote a culture of innovation and entrepreneurship in India. AIM has selected a number of institutions for supporting them in establishing the Atal Community Innovation Centers (ACICs). CBIT has been selected from Telangana by AIM and received approval for the establishment of Atal Community Innovation Centre (ACIC) at CBIT Campus. ACIC-CBIT Research and Entrepreneurship Foundation, a registered section 8 company, is a Special Purpose Vehicle (SPV) promoted by CBIT. ACIC-CBIT provides requisite infrastructure and resources for innovators in the unserved / underserved regions.
 
+ACIC-CBIT aligns their activities to engage a large number of grassroot innovators, communities, students and academicians in various innovation and entrepreneurship related activities such as ideation, Problem solving, Proof of Concept development, Design Thinking, IPR etc. The ACIC-CBIT will connect with other stakeholders at various platforms to accelerate the implementation of the activities under ACIC-CBIT.
             </p>
 
         </section>
@@ -30,36 +33,75 @@
     <div>
         <!--vision section-->
         <section id="vision">
-            <h2> our mission </h2>
-         <p > </p>
-
+            <h2> Our Vision </h2>
+         <p > ACIC CBIT vision is to encourage a spirit of entrepreneurship in the underserved/unserved regions by providing enabling infrastructure and facilitating an environment for innovations.</p>
+<img src="vsion-1.png" alt="vision image" width="200" height="200">
+  <h2> Our Mission </h2>
+<p > To provide directional training and mentorship with infrastructural and Adoptive Innovation frameworks for the innovators to offer cost-effective, sustainable solutions for societal problems by targeting to achieve Sustainable Development Goals (SDGs). Innovation Center will serve as an operational knowledge and resource catalyst for the Innovators to develop into promising entrepreneurs to address the emergent need of the community by providing local innovative and scalable solutions.</p>
+         <img src="4.png" alt="mission image" width="600" height="400">
          </section>
          <!--end of vision section -->
 
     </div>
-    <div>
-        <!-- objective section-->
-        <section id="objective">
-            <h2> our mission </h2>
-         <p > </p>
+     <section id="objective">
+            <h2> our objective</h2>
+        <pre>
+<b>ACIC CBIT vision is to encourage a spirit of entrepreneurship in the underserved/unserved regions by providing enabling infrastructure and facilitating an environment for innovations</b>
+1.To build an Innovative mindset and the need for entrepreneurship among the community.
+2.To enhance the domain knowledge, skills and attitudes (K-S-A) to develop innovative products and services.
+3.To promote design thinking processes among the community and provide the necessary infrastructure support for building prototypes and MVP.
+4.To build a vibrant startup ecosystem, by establishing a network between academia, industries, incubation centers, financial institutions, Government and other stakeholders.
+5.To build the sector specific Expert Mentor pool from academia and industry to provide expert opinions and suggestions to Innovators/startups.
+6.To provide necessary support services, such as Legal, IPR, Funding and Market Access to help innovators become sustainable startups.
+        </pre>
 
-         </section>
-         <!--end of objective section -->
+    <!-- Load Navigation and Footer -->
+    <script>
+        // Load nav.html into this page
+        fetch("nav.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("nav").innerHTML = data;
+          })
+          .catch(error => console.error('Error loading navigation:', error));
 
-    </div>
-    
+        // Load footer.html into this page
+        fetch("footer.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("footer-content").innerHTML = data;
+          })
+          .catch(error => console.error('Error loading footer:', error));
+    </script>
+    <style>
+        #about #objective {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #34495e;
+        }
+         #vision,#mission {
+            background-color: rgb(250, 226, 230);
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #34495e;
+        }
 
-     <div>
-        <!-- footer section -->
-         <section id ="footer">
-            <p>
-                &copy 2024 all right reserved 
-            </p>
-
-         </section>
-         <!-- end of  footer section -->
-    </div>
-
+    </style>
     
 </body>
 </html>

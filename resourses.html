@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - ACIC CBIT</title>
+</head>
+<body>
+    <div>
+        <!-- navigation section -->
+        <section id ='navigation'>
+  <!-- Placeholder for nav -->
+  <div id="nav"></div>
+        </section>
+            <!-- end  of  navigation  section -->
+    </div>
+    
+    <div>
+        <!--resources section -->
+        <section id ="resources">
+            <h1>Resources</h1>
+            <p>Information about our resources will be displayed here.</p>
+        </section>
+        <!--end of resources section-->
+    </div>
+
+    <div>
+        <!-- footer section -->
+         <section id ="footer">
+            <!-- Placeholder for footer -->
+            <div id="footer-content"></div>
+         </section>
+         <!-- end of  footer section -->
+    </div>
+
+    <!-- Load Navigation and Footer -->
+    <script>
+        // Load nav.html into this page
+        fetch("nav.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("nav").innerHTML = data;
+          })
+          .catch(error => console.error('Error loading navigation:', error));
+
+        // Load footer.html into this page
+        fetch("footer.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("footer-content").innerHTML = data;
+          })
+          .catch(error => console.error('Error loading footer:', error));
+    </script>
+    
+</body>
+</html>
+

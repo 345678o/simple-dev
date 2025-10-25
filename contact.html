@@ -6,41 +6,142 @@
     <title>Document</title>
 </head>
 <body>
-<div>
-    <!-- navigation section -->
-    <section id ='navigation'>
-    <a href="index.html"> home </a> 
-    <a href="about.html">about us</a>
-    <a href="office.html">office</a>
-    <a href="placements.html">placements</a>
-    <a href="contact.html">contact us</a>
-    </section>
-            <!-- end  of  navigation  section -->
-    </div>
     <div>
-        <!--contact section -->
-        <section id ="contact">
-            <h1>
-                contact us 
-            </h1>
-            <p>
-
-            </p>
-
+      <form class="contact-form">
+        <h2>Get In Touch</h2>
+        <div class="form-group">
+          <input type="text" placeholder="Name" required />
+          <input type="email" placeholder="Email" required />
+        </div>
+        <div class="form-group">
+          <input type="tel" placeholder="Phone Number" required />
+          <input type="text" placeholder="Subject" required />
+        </div>
+        <textarea placeholder="Your Messages.." required></textarea>
+        <div class="checkbox">
+          <input type="checkbox" required /> I agree to the
+          <a href="#">terms</a> and <a href="#">privacy policy</a>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+      </div>
         </section>
+        <div class="section-content">
+          <div class="row">
+              <div class="col-lg-4">
+                  <div class="google-map pr-20">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7606.349071007194!2d78.441189!3d17.594445!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2aa927e931d97eee!2sMLR%20Institute%20Of%20Technology%20%7C%20Best%20Engineering%20College%20in%20Hyderabad%20%26%20Telangana!5e0!3m2!1sen!2sin!4v1656236073954!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></iframe>
+                  </div>
+              </div>
         <!--end of contact section-->
     </div>
-        <div>
-            <!-- footer section -->
-            <section id ="footer">
-                <p>
-                    &copy 2024 all right reserved 
-                </p>
-    
-            </section>
-            <!-- end of  footer section -->
-        </div>
+        <style>
+          body {
+            font-family: 'Poppins', sans-serif;
+            background: #f8f9fa;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+          }
+      
+          .contact-form {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            width: 450px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+          }
+      
+          h2 {
+            text-align: center;
+            color: #12e061;
+            font-weight: 700;
+            margin-bottom: 20px;
+          }
+      
+          .form-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+          }
+      
+          input,
+          textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.3s;
+          }
+      
+          input:focus,
+          textarea:focus {
+            border-color: #11d514;
+          }
+      
+          textarea {
+            resize: none;
+            height: 100px;
+          }
+      
+          .checkbox {
+            margin: 10px 0;
+            font-size: 14px;
+          }
+      
+          .checkbox a {
+            color: #0ce37e;
+            text-decoration: none;
+          }
+      
+          button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background: #0bb635;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+          }
+      
+          button:hover {
+            background: #0ccf5d;
+          }
+        </style>
 
+    <!-- Load Navigation and Footer -->
+    <script>
+        // Load nav.html into this page
+        fetch("nav.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("nav").innerHTML = data;
+          })
+          .catch(error => console.error('Error loading navigation:', error));
+
+        // Load footer.html into this page
+        fetch("footer.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("footer-content").innerHTML = data;
+          })
+          .catch(error => console.error('Error loading footer:', error));
+    </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VMK4MGGS0F"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-VMK4MGGS0F');
+        </script>
 
 </body>
 </html>

@@ -3,55 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events - ACIC CBIT</title>
+    <title>Events | ACIC MLRIT</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <!-- navigation section -->
-        <section id ='navigation'>
-  <!-- Placeholder for nav -->
-  <div id="nav"></div>
-        </section>
-            <!-- end  of  navigation  section -->
-    </div>
-    
-    <div>
-        <!--events section -->
-        <section id ="events">
-            <h1>Events</h1>
-            <p>Information about our events will be displayed here.</p>
-        </section>
-        <!--end of events section-->
+
+<header class="header">
+    <div class="logo"><a href="index.html">ACIC MLRIT</a></div>
+    <nav class="navbar">
+        <a href="student-startup.html">Student Startup</a>
+        <a href="entrepreneurship.html">Entrepreneurship</a>
+        <a href="programs.html">Programs</a>
+        <a href="innovation.html">Innovation</a>
+        <a href="events.html" class="active">Events</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Events</h1>
+    <p>Workshops, hackathons, showcases & innovation festivals</p>
+</section>
+
+<section class="content-section">
+    <h2>Why Attend ACIC Events?</h2>
+    <ul>
+        <li>Learn from industry experts & mentors</li>
+        <li>Network with entrepreneurs and innovators</li>
+        <li>Showcase your ideas & get recognition</li>
+        <li>Discover funding & incubation opportunities</li>
+    </ul>
+</section>
+
+<section class="cards-section wide">
+    <div class="card">
+        <h3>Hackathons</h3>
+        <p>Rapid problem-solving events with team collaboration.</p>
     </div>
 
-    <div>
-        <!-- footer section -->
-         <section id ="footer">
-            <!-- Placeholder for footer -->
-            <div id="footer-content"></div>
-         </section>
-         <!-- end of  footer section -->
+    <div class="card">
+        <h3>Innovation Demo Day</h3>
+        <p>Pitch your product or prototype to investors and faculty.</p>
     </div>
 
-    <!-- Load Navigation and Footer -->
-    <script>
-        // Load nav.html into this page
-        fetch("nav.html")
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById("nav").innerHTML = data;
-          })
-          .catch(error => console.error('Error loading navigation:', error));
+    <div class="card">
+        <h3>Entrepreneurship Workshops</h3>
+        <p>Practical sessions to develop strategy & business skills.</p>
+    </div>
 
-        // Load footer.html into this page
-        fetch("footer.html")
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById("footer-content").innerHTML = data;
-          })
-          .catch(error => console.error('Error loading footer:', error));
-    </script>
-    
+    <div class="card">
+        <h3>Awareness Programs</h3>
+        <p>Talks & seminars on innovation, startup ecosystem & policies.</p>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>© 2025 ACIC MLRIT Foundation. All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>
-

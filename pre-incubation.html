@@ -15,13 +15,275 @@
             <!-- end  of  navigation  section -->
     </div>
     
+     <div>
+        <section class="program-highlights">
+  <h2>Program Highlights</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="workshop-icon.png" alt="Workshop Icon" />
+      <p>
+        Curated and Structured workshops from the experts covering,
+        identifying customers to validating the idea to building minimum viable products.
+      </p>
+    </div>
+
+    <div class="card highlight">
+      <img src="idea-icon.png" alt="Idea Icon" />
+      <p>
+        Access to the Idea building tools such as: idea validation; mind maps focusing on
+        SWOT analysis; Customer and Stakeholder mapping and many more.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="mvp-icon.png" alt="MVP Icon" />
+      <p>
+        Build Minimum Viable Product to present to the investors/banks for raising funds and other support.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="equipment-icon.png" alt="Testing Equipment Icon" />
+      <p>
+        Access to Testing equipment; 3D printing; Labs: IoT; Drone; Mechanical and a co-working space.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="community-icon.png" alt="Community Icon" />
+      <p>
+        Learn and share in a community of like-minded founders in a collaborative environment.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="certificate-icon.png" alt="Certificate Icon" />
+      <p>
+        Receive an e-Certificate upon successful completion of the Programme.
+      </p>
+    </div>
+  </div>
+</section>
+<style>
+  body {
+  font-family: "Poppins", sans-serif;
+  background: #fafafa;
+  margin: 0;
+  padding: 0;
+}
+
+.program-highlights {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.program-highlights h2 {
+  color: #b30000;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  max-width: 350px;
+  cursor: pointer;
+}
+
+.card img {
+  width: 60px;
+  margin-bottom: 20px;
+  transition: filter 0.3s ease;
+}
+
+.card p {
+  font-size: 15px;
+  color: #222;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.card:hover {
+  background: lab(79.45% -70.63 56.98);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover p {
+  color: #fff;
+}
+
+.card:hover img {
+  filter: brightness(0) invert(1);
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* exactly 3 columns */
+  gap: 25px;
+  justify-items: center;
+}
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablet */
+  }
+}
+
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr; /* 1 per row on mobile */
+  }
+}
+
+
+</style>
+    </div>
     <div>
-        <!--for-innovators section -->
-        <section id ="for-innovators">
-            <h1>For Innovators and Startups</h1>
-            <p>Information for innovators and startups will be displayed here.</p>
-        </section>
-        <!--end of for-innovators section-->
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ Section</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #fafafa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .faq-container {
+      max-width: 850px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 50px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .faq-title {
+      font-size: 28px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #222;
+      letter-spacing: 0.3px;
+    }
+
+    details {
+      border-bottom: 1px solid #e5e5e5;
+      padding: 18px 0;
+    }
+
+    details:last-child {
+      border-bottom: none;
+    }
+
+    summary {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 500;
+      color: #222;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    summary:hover {
+      color: #b30000;
+    }
+
+    summary::before {
+      content: "+";
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      margin-right: 12px;
+      text-align: center;
+      line-height: 28px;
+      background: #f0f0f0;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 18px;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    details[open] summary::before {
+      content: "×";
+      background: #b30000;
+      color: #fff;
+      transform: rotate(90deg);
+    }
+
+    details p {
+      margin: 12px 0 0 40px;
+      color: #555;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* Smooth transition for open/close */
+    details[open] summary ~ * {
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-5px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .faq-container {
+        padding: 30px 20px;
+      }
+      .faq-title {
+        font-size: 24px;
+      }
+      summary {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="faq-container">
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+
+    <details>
+      <summary>I have 2 ideas; can I submit both?</summary>
+      <p>Yes, you can submit both ideas. Each one will be evaluated individually.</p>
+    </details>
+
+    <details>
+      <summary>I have a team,
+  can we apply together?</summary>
+      <p>
+        Yes, teams of up to 4 members can apply together under a single application.
+      </p>
+    </details>
     </div>
 
     <div>

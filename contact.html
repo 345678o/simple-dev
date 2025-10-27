@@ -1,12 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  
+  <!-- Font Awesome for Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  />
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .contact-wrapper {
+      max-width: 1100px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 50px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-title {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 600;
+      color: #111;
+      margin-bottom: 40px;
+    }
+
+    .contact-top {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .contact-box {
+      flex: 1 1 300px;
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .contact-box:hover {
+      background: #f9f9f9;
+      transform: translateY(-4px);
+    }
+
+    .contact-box i {
+      font-size: 32px;
+      color: #d11a2a;
+      margin-bottom: 10px;
+    }
+
+    .contact-box h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+      color: #111;
+    }
+
+    .contact-box p {
+      font-size: 15px;
+      color: #555;
+    }
+
+    /* FORM SECTION */
+    .form-map-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .contact-form {
+      flex: 1 1 450px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-form h2 {
+      text-align: center;
+      color: #d11a2a;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+      outline: none;
+      transition: all 0.3s;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #d11a2a;
+    }
+
+    textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    .checkbox {
+      margin: 10px 0;
+      font-size: 14px;
+    }
+
+    .checkbox a {
+      color: #d11a2a;
+      text-decoration: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background: #d11a2a;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    button:hover {
+      background: #b30000;
+    }
+
+    /* MAP */
+    .map {
+      flex: 1 1 450px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    @media (max-width: 900px) {
+      .form-map-wrapper {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <div>
+  <section class="contact-wrapper">
+    <h2 class="contact-title">Contact Us</h2>
+
+    <div class="contact-top">
+      <div class="contact-box">
+        <i class="fa-solid fa-envelope"></i>
+        <h3>Email</h3>
+        <p>info@yourorganization.com</p>
+      </div>
+
+      <div class="contact-box">
+        <i class="fa-solid fa-phone"></i>
+        <h3>Phone</h3>
+        <p>+91 98765 43210</p>
+      </div>
+
+      <div class="contact-box">
+        <i class="fa-solid fa-location-dot"></i>
+        <h3>Address</h3>
+        <p>MLR Institute of Technology,<br>Hyderabad, Telangana</p>
+      </div>
+    </div>
+
+    <div class="form-map-wrapper">
+      <!-- Contact Form -->
       <form class="contact-form">
         <h2>Get In Touch</h2>
         <div class="form-group">
@@ -17,131 +211,73 @@
           <input type="tel" placeholder="Phone Number" required />
           <input type="text" placeholder="Subject" required />
         </div>
-        <textarea placeholder="Your Messages.." required></textarea>
+        <textarea placeholder="Your Message..." required></textarea>
         <div class="checkbox">
           <input type="checkbox" required /> I agree to the
-          <a href="#">terms</a> and <a href="#">privacy policy</a>
+          <a href="#">terms</a> and <a href="#">privacy policy</a>.
         </div>
         <button type="submit">Send Message</button>
       </form>
+
+      <!-- Google Map -->
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7606.349071007194!2d78.441189!3d17.594445!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2aa927e931d97eee!2sMLR%20Institute%20Of%20Technology!5e0!3m2!1sen!2sin!4v1656236073954!5m2!1sen!2sin"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
       </div>
-        </section>
-        <div class="section-content">
-          <div class="row">
-              <div class="col-lg-4">
-                  <div class="google-map pr-20">
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7606.349071007194!2d78.441189!3d17.594445!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2aa927e931d97eee!2sMLR%20Institute%20Of%20Technology%20%7C%20Best%20Engineering%20College%20in%20Hyderabad%20%26%20Telangana!5e0!3m2!1sen!2sin!4v1656236073954!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></iframe>
-                  </div>
-              </div>
-        <!--end of contact section-->
     </div>
-        <style>
-          body {
-            font-family: 'Poppins', sans-serif;
-            background: #f8f9fa;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-          }
-      
-          .contact-form {
-            background: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            width: 450px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-          }
-      
-          h2 {
-            text-align: center;
-            color: #12e061;
-            font-weight: 700;
-            margin-bottom: 20px;
-          }
-      
-          .form-group {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 15px;
-          }
-      
-          input,
-          textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 14px;
-            outline: none;
-            transition: all 0.3s;
-          }
-      
-          input:focus,
-          textarea:focus {
-            border-color: #11d514;
-          }
-      
-          textarea {
-            resize: none;
-            height: 100px;
-          }
-      
-          .checkbox {
-            margin: 10px 0;
-            font-size: 14px;
-          }
-      
-          .checkbox a {
-            color: #0ce37e;
-            text-decoration: none;
-          }
-      
-          button {
-            width: 100%;
-            padding: 12px;
-            border: none;
-            background: #0bb635;
-            color: white;
-            font-size: 16px;
-            font-weight: 600;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: all 0.3s;
-          }
-      
-          button:hover {
-            background: #0ccf5d;
-          }
-        </style>
+    
+  </section>
+  
+  <div id="nav"></div>   <!-- Navigation will load here -->
 
-    <!-- Load Navigation and Footer -->
-    <script>
-        // Load nav.html into this page
-        fetch("nav.html")
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById("nav").innerHTML = data;
-          })
-          .catch(error => console.error('Error loading navigation:', error));
+  <!-- Your entire contact page content goes here -->
 
-        // Load footer.html into this page
-        fetch("footer.html")
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById("footer-content").innerHTML = data;
-          })
-          .catch(error => console.error('Error loading footer:', error));
-    </script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VMK4MGGS0F"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-        
-          gtag('config', 'G-VMK4MGGS0F');
-        </script>
+  <div id="footer-content"></div> <!-- Footer will load here -->
+
+  <body>
+  <!-- Navbar loads here -->
+  <div id="nav"></div>
+
+  <!-- Your page content goes here -->
+  <main>
+    <h1>Contact Us</h1>
+    <p>Welcome to our contact page. You can reach us through email or phone.</p>
+
+    <!-- Example Contact Form -->
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </main>
+
+  <!-- Footer loads here -->
+  <div id="footer-content"></div>
+
+  <!-- Script to load nav and footer -->
+  <script>
+    // Load navigation
+    fetch("nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav").innerHTML = data;
+      })
+      .catch(error => console.error("Error loading navigation:", error));
+
+    // Load footer
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-content").innerHTML = data;
+      })
+      .catch(error => console.error("Error loading footer:", error));
+  </script>
+
+
 
 </body>
 </html>

@@ -1,128 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACIC CBIT - About Us</title>
+
+  <!-- Font Awesome for LinkedIn Icon -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  />
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    #about, #objective {
+      margin: 40px auto;
+      max-width: 1000px;
+      padding: 20px 30px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+    }
+
+    p, pre {
+      color: #34495e;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ===== VISION & MISSION ===== */
+    #vision {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 24px;
+      background-color: rgb(87, 218, 87);
+    }
+
+    .block {
+      display: flex;
+      gap: 24px;
+      align-items: stretch;
+      margin-bottom: 40px;
+    }
+
+    .block.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .text {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .image {
+      flex: 0 0 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .profile-card {
+  display: inline-block;
+}
+
+    @media(max-width: 800px) {
+      .block, .block.reverse {
+        flex-direction: column;
+        text-align: center;
+      }
+      .image img {
+        height: auto;
+      }
+    }
+
+    /* ===== PROFILE CARD ===== */
+    .profile-card {
+      position: relative;
+      width: 250px;
+      height: 250px;
+      margin: 50px auto;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+      transition: all 0.4s ease;
+      cursor: pointer;
+    }
+
+    .profile-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: all 0.4s ease;
+    }
+
+    .profile-card:hover .overlay {
+      opacity: 1;
+    }
+
+    .linkedin-btn {
+      background-color: #0077b5;
+      color: #fff;
+      font-size: 22px;
+      padding: 12px 16px;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .linkedin-btn:hover {
+      background-color: #005c8a;
+      transform: scale(1.1);
+    }
+
+    /* ===== FOOTER SPACING ===== */
+    #footer-content {
+      margin-top: 60px;
+    }
+  </style>
 </head>
 <body>
-    <div>
-        <!-- navigation section -->
-        <section id ='navigation'>
-  <!-- Placeholder for nav -->
+
+  <!-- Navigation -->
   <div id="nav"></div>
-        </section>
-            <!-- end  of  navigation  section -->
-    </div>
-    <div>
-        <!--about section -->
-        <section id ="about">
-            <h1>
-                About Us 
-            </h1>
-            <p>
-Atal Innovation Mission (AIM) at NITI Aayog is mandated to promote a culture of innovation and entrepreneurship in India. AIM has selected a number of institutions for supporting them in establishing the Atal Community Innovation Centers (ACICs). CBIT has been selected from Telangana by AIM and received approval for the establishment of Atal Community Innovation Centre (ACIC) at CBIT Campus. ACIC-CBIT Research and Entrepreneurship Foundation, a registered section 8 company, is a Special Purpose Vehicle (SPV) promoted by CBIT. ACIC-CBIT provides requisite infrastructure and resources for innovators in the unserved / underserved regions.
 
-ACIC-CBIT aligns their activities to engage a large number of grassroot innovators, communities, students and academicians in various innovation and entrepreneurship related activities such as ideation, Problem solving, Proof of Concept development, Design Thinking, IPR etc. The ACIC-CBIT will connect with other stakeholders at various platforms to accelerate the implementation of the activities under ACIC-CBIT.
-            </p>
+  <!-- About Section -->
+  <section id="about">
+    <h1>About Us</h1>
+    <p>
+      Atal Innovation Mission (AIM) at NITI Aayog is mandated to promote a culture of innovation and entrepreneurship in India.
+      AIM has selected a number of institutions for supporting them in establishing the Atal Community Innovation Centers (ACICs).
+      CBIT has been selected from Telangana by AIM and received approval for the establishment of Atal Community Innovation Centre (ACIC) at CBIT Campus.
+      ACIC-CBIT provides requisite infrastructure and resources for innovators in underserved regions.
+    </p>
+  </section>
 
-        </section>
-        <!--end of about section-->
+  <!-- Vision & Mission -->
+  <section id="vision">
+    <div class="block">
+      <div class="text">
+        <h2>Our Vision</h2>
+        <p>Encourage entrepreneurship in underserved regions by providing infrastructure and innovation support.</p>
+      </div>
+      <div class="image"><img src="vsion-1.png" alt="Vision Image" /></div>
+    </div>
 
+    <div class="block reverse">
+      <div class="text">
+        <h2>Our Mission</h2>
+        <p>Provide mentorship, infrastructure, and frameworks to develop innovators into sustainable entrepreneurs.</p>
+      </div>
+      <div class="image"><img src="4.png" alt="Mission Image" /></div>
     </div>
-    <div>
-        <!--vision section-->
-       <section id="vision">
-  <div class="block">
-    <div class="text">
-      <h2>Our Vision</h2>
-      <p>ACIC CBIT vision is to encourage a spirit of entrepreneurship in underserved regions by providing enabling infrastructure and facilitating an environment for innovations.</p>
+  </section>
+
+  <!-- Objective -->
+  <section id="objective">
+    <h2>Our Objectives</h2>
+    <pre>
+1. Build innovative and entrepreneurial mindsets in the community.
+2. Enhance domain knowledge, skills, and attitudes for innovation.
+3. Promote design thinking and prototype development.
+4. Build a strong startup ecosystem through collaboration.
+5. Provide mentor networks and expert guidance.
+6. Offer legal, IPR, and funding support for startups.
+    </pre>
+  </section>
+
+  <!-- Profile Card with LinkedIn Hover -->
+<div style="display: flex; justify-content: center; align-items: center; gap: 50px; flex-wrap: wrap; padding: 40px 0;">
+
+  <!-- Profile 1 -->
+  <div class="profile-card">
+    <img src="mlrit 2.jpeg" alt="Person 1" />
+    <div class="overlay">
+      <a href="https://www.linkedin.com/in/example1" target="_blank" class="linkedin-btn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
     </div>
-    <div class="image"><img src="vsion-1.png" alt="vision image"></div>
   </div>
 
-  <div class="block reverse">
-    <div class="text">
-      <h2>Our Mission</h2>
-      <p>To provide directional training and mentorship with infrastructural and Adoptive Innovation frameworks for innovators to offer cost-effective, sustainable solutions addressing SDGs. Innovation Center will serve as a knowledge and resource catalyst to develop promising entrepreneurs providing local scalable solutions.</p>
+  <!-- Profile 2 -->
+  <div class="profile-card">
+    <img src="mlrit 2.jpeg" alt="Person 2" />
+    <div class="overlay">
+      <a href="https://www.linkedin.com/in/example2" target="_blank" class="linkedin-btn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
     </div>
-    <div class="image"><img src="4.png" alt="mission image"></div>
   </div>
-</section>
-         <!--end of vision section -->
-         <style>
-  #vision {max-width:1100px;margin:auto;padding:24px;font-family:Arial,sans-serif;}
-  .block {display:flex;gap:24px;align-items:stretch;margin-bottom:40px;}
-  .block.reverse {flex-direction:row-reverse;}
-  .text {flex:1;display:flex;flex-direction:column;justify-content:center;}
-  .text h2 {margin-bottom:12px;}
-  .text p {margin:0;line-height:1.5;}
-  .image {flex:0 0 50%;display:flex;justify-content:center;align-items:center;}
-  .image img {width:100%;height:100%;object-fit:cover;border-radius:10px;}
-  @media(max-width:800px){.block,.block.reverse{flex-direction:column;text-align:center}.image{width:100%}.image img{height:auto}}
-</style> 
 
+  <!-- Profile 3 -->
+  <div class="profile-card">
+    <img src="mlrit 2.jpeg" alt="Person 3" />
+    <div class="overlay">
+      <a href="https://www.linkedin.com/in/example3" target="_blank" class="linkedin-btn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
     </div>
-     <section id="objective">
-            <h2> our objective</h2>
-        <pre>
-<b>ACIC CBIT vision is to encourage a spirit of entrepreneurship in the underserved/unserved regions by providing enabling infrastructure and facilitating an environment for innovations</b>
-1.To build an Innovative mindset and the need for entrepreneurship among the community.
-2.To enhance the domain knowledge, skills and attitudes (K-S-A) to develop innovative products and services.
-3.To promote design thinking processes among the community and provide the necessary infrastructure support for building prototypes and MVP.
-4.To build a vibrant startup ecosystem, by establishing a network between academia, industries, incubation centers, financial institutions, Government and other stakeholders.
-5.To build the sector specific Expert Mentor pool from academia and industry to provide expert opinions and suggestions to Innovators/startups.
-6.To provide necessary support services, such as Legal, IPR, Funding and Market Access to help innovators become sustainable startups.
-        </pre>
+  </div>
 
-    <!-- Load Navigation and Footer -->
-    <script>
-        // Load nav.html into this page
-        fetch("nav.html")
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById("nav").innerHTML = data;
-          })
-          .catch(error => console.error('Error loading navigation:', error));
+</div>
 
-        // Load footer.html into this page
-        fetch("footer.html")
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById("footer-content").innerHTML = data;
-          })
-          .catch(error => console.error('Error loading footer:', error));
-    </script>
-    <style>
-        #about #objective {
-            margin: 20px;
-            padding: 20px;
-            border: 1px solid #fff;
-            border-radius: 5px;
-            background-color: #fff;
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        p {
-            font-size: 16px;
-            line-height: 1.5;
-            color: #34495e;
-        }
-         #vision,#mission {
-            background-color: rgb(250, 226, 230);
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        p {
-            font-size: 16px;
-            line-height: 1.5;
-            color: #34495e;
-        }
+  <!-- Footer -->
+  <div id="footer-content"></div>
 
-    </style>
-    
-    
+  <!-- JS for Nav & Footer -->
+  <script>
+    // Load nav.html
+    fetch("nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav").innerHTML = data;
+      })
+      .catch(error => console.error("Error loading navigation:", error));
+
+    // Load footer.html
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-content").innerHTML = data;
+      })
+      .catch(error => console.error("Error loading footer:", error));
+  </script>
+
 </body>
 </html>

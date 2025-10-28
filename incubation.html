@@ -1,56 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Incubation - ACIC CBIT</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Incubation - ACIC CBIT</title>
+
+  <!-- Font Awesome for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: #fff;
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+
+    /* ---------- INCUBATION SECTION ---------- */
+    .program-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      padding: 60px 20px;
+      flex-wrap: wrap;
+      perspective: 1000px;
+    }
+
+    .card {
+      background: transparent;
+      width: 300px;
+      height: 250px;
+      perspective: 1000px;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+      border-radius: 12px;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .card-front .icon {
+      background: #fff5f5;
+      border-radius: 50%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 70px;
+      height: 70px;
+      margin-bottom: 15px;
+    }
+
+    .card-front .icon i {
+      color: #d11a2a;
+      font-size: 28px;
+    }
+
+    .card-front h3 {
+      color: #222;
+      font-size: 22px;
+      margin: 0;
+    }
+
+    .card-front p {
+      color: #555;
+      font-size: 15px;
+      margin-top: 8px;
+    }
+
+    .card-back {
+      background-color: #d11a2a;
+      color: #fff;
+      transform: rotateY(180deg);
+    }
+
+    .card-back h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .card-back p {
+      font-size: 15px;
+      line-height: 1.4;
+      max-width: 230px;
+    }
+
+    .apply-text {
+      text-align: center;
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 15px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .apply-btn {
+      display: block;
+      margin: 25px auto 60px;
+      padding: 12px 28px;
+      background-color: #d11a2a;
+      color: white;
+      font-weight: 600;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .apply-btn:hover {
+      background-color: #a50f1e;
+    }
+
+    /* ---------- PROGRAM HIGHLIGHTS SECTION ---------- */
+    h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-top: 70px;
+      color: #222;
+    }
+
+    .highlight-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      justify-items: center;
+      align-items: stretch;
+      padding: 40px 80px;
+    }
+
+    .highlight-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      text-align: center;
+      padding: 30px 20px;
+      transition: all 0.4s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .highlight-card:hover {
+      background-color: #c40c0c;
+      color: #fff;
+      transform: translateY(-6px);
+    }
+
+    .highlight-card img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      margin-bottom: 20px;
+      transition: filter 0.4s ease;
+    }
+
+    .highlight-card:hover img {
+      filter: brightness(0) invert(1);
+    }
+
+    .highlight-card p {
+      font-size: 15px;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .highlight-section {
+        padding: 20px;
+      }
+      h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div>
-        <!-- navigation section -->
-        <section id ='navigation'>
-  <!-- Placeholder for nav -->
+
   <div id="nav"></div>
-        </section>
-            <!-- end  of  navigation  section -->
-    </div>
-    
-    <div>
-        <!--incubation section -->
-        <section id ="incubation">
-            <h1>Incubation</h1>
-            <p>Information about our incubation programs will be displayed here.</p>
-        </section>
-        <!--end of incubation section-->
-    </div>
 
-    <div>
-        <!-- footer section -->
-         <section id ="footer">
-            <!-- Placeholder for footer -->
-            <div id="footer-content"></div>
-         </section>
-         <!-- end of  footer section -->
+  <!-- INCUBATION PROGRAM SECTION -->
+  <section class="program-section">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="icon"><i class="fa-solid fa-file-lines"></i></div>
+          <h3>Rs 6,000/-</h3>
+          <p>Registration Fee</p>
+        </div>
+        <div class="card-back">
+          <h3>What it covers</h3>
+          <p>Includes access to mentorship, resources, and workspace for your startup journey.</p>
+        </div>
+      </div>
     </div>
 
-    <!-- Load Navigation and Footer -->
-    <script>
-        // Load nav.html into this page
-        fetch("nav.html")
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById("nav").innerHTML = data;
-          })
-          .catch(error => console.error('Error loading navigation:', error));
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="icon"><i class="fa-solid fa-clock"></i></div>
+          <h3>6 - 12 Months</h3>
+          <p>Program Duration</p>
+        </div>
+        <div class="card-back">
+          <h3>Flexible Duration</h3>
+          <p>Based on startup milestones and performance metrics. Stay as long as your idea grows.</p>
+        </div>
+      </div>
+    </div>
 
-        // Load footer.html into this page
-        fetch("footer.html")
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById("footer-content").innerHTML = data;
-          })
-          .catch(error => console.error('Error loading footer:', error));
-    </script>
-    
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="icon"><i class="fa-solid fa-briefcase"></i></div>
+          <h3>Rs. 2500/-</h3>
+          <p>Monthly Fee</p>
+        </div>
+        <div class="card-back">
+          <h3>What’s included</h3>
+          <p>Workspace, Wi-Fi, tools, networking events, and access to investor sessions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <p class="apply-text">
+    ACIC-CBIT's Incubation Program aims to foster innovation, support growth, and facilitate the journey of startups towards becoming scalable and impactful ventures. Apply now to take your venture to new heights!
+  </p>
+
+  <button class="apply-btn">Click Here to Apply</button>
+
+  <!-- PROGRAM HIGHLIGHTS SECTION -->
+  <h2>Program Highlights</h2>
+  <section class="highlight-section">
+    <div class="highlight-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2920/2920244.png" alt="Strategy Icon">
+      <p>Design Your Go-to-Market Strategy: Refine your market entry strategies under expert guidance.</p>
+    </div>
+
+    <div class="highlight-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/8292/8292473.png" alt="Pilot Support">
+      <p>Support on Conducting Pilots: Assistance in conducting pilot programs to validate your product or service.</p>
+    </div>
+
+    <div class="highlight-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828961.png" alt="Demo Day">
+      <p>Demo Day with Investors: Showcase your venture to potential investors and stakeholders.</p>
+    </div>
+
+    <div class="highlight-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png" alt="IP Support">
+      <p>Support on Intellectual Property Rights: Guidance and assistance in navigating intellectual property rights and protection.</p>
+    </div>
+
+    <div class="highlight-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png" alt="Mentorship">
+      <p>Access to Technical and Business Mentors: Direct access to a network of experienced mentors providing technical and business guidance.</p>
+    </div>
+  </section>
+
+  <div id="footer-content"></div>
+
+  <script>
+    fetch("nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav").innerHTML = data;
+      })
+      .catch(error => console.error("Error loading navigation:", error));
+
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-content").innerHTML = data;
+      })
+      .catch(error => console.error("Error loading footer:", error));
+  </script>
+
 </body>
 </html>

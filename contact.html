@@ -20,6 +20,7 @@
       color: #333;
     }
 
+    /* Contact Section Wrapper */
     .contact-wrapper {
       max-width: 1100px;
       margin: 60px auto;
@@ -75,7 +76,7 @@
       color: #555;
     }
 
-    /* FORM SECTION */
+    /* FORM + MAP */
     .form-map-wrapper {
       display: flex;
       justify-content: space-between;
@@ -176,6 +177,10 @@
 </head>
 
 <body>
+  <!-- Navbar loads here -->
+  <div id="nav"></div>
+
+  <!-- Contact Page Content -->
   <section class="contact-wrapper">
     <h2 class="contact-title">Contact Us</h2>
 
@@ -228,32 +233,7 @@
         ></iframe>
       </div>
     </div>
-    
   </section>
-  
-  <div id="nav"></div>   <!-- Navigation will load here -->
-
-  <!-- Your entire contact page content goes here -->
-
-  <div id="footer-content"></div> <!-- Footer will load here -->
-
-  <body>
-  <!-- Navbar loads here -->
-  <div id="nav"></div>
-
-  <!-- Your page content goes here -->
-  <main>
-    <h1>Contact Us</h1>
-    <p>Welcome to our contact page. You can reach us through email or phone.</p>
-
-    <!-- Example Contact Form -->
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </main>
 
   <!-- Footer loads here -->
   <div id="footer-content"></div>
@@ -276,8 +256,5 @@
       })
       .catch(error => console.error("Error loading footer:", error));
   </script>
-
-
-
 </body>
 </html>

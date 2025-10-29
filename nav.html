@@ -1,224 +1,392 @@
-<nav class="navbar">
-  <div class="logo">
-    <img src="logo.png" alt="Logo" />
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nav — Fixed Dropdown</title>
+  <style>
+    :root{
+      --accent:#ffcc00;
+      --bg-start:#ffffff;
+      --bg-mid:#fdf7e2;
+      --bg-end:#fff4cc;
+      --text:#111;
+      --radius:12px;
+    }
+
+    /* Reset-ish */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:var(--text)}
+    a{color:inherit}
+
+    /* Whole Navbar */
+    .navbar {
+      width: 100%;
+      background: linear-gradient(90deg, var(--bg-start), var(--bg-mid), var(--bg-end));
+      box-shadow: 0 6px 22px rgba(0,0,0,0.08);
+      border-radius: var(--radius);
+      padding: 14px 56px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      position: sticky;
+      top: 12px;
+      z-index: 1200;
+      align-self: stretch;
+      /* visually longer by adding side spacing inside page */
+      margin: 12px 18px;
+    }
+
+    /* Left: Logo */
+    .logo {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex: 0 0 auto;
+    }
+    .logo img{
+      height:64px;
+      width:auto;
+      object-fit:contain;
+      transition:transform .25s ease;
+      display:block;
+    }
+    .logo img:hover{ transform:scale(1.045) }
+
+    /* Right: links area */
+    .nav-links {
+      display:flex;
+      align-items:center;
+      gap:18px;
+      margin-left:auto;
+      /* make it fill remaining space so it feels longer */
+      flex: 1 1 auto;
+      justify-content:flex-end;
+      /* avoid inner horizontal scroll */
+      overflow:visible;
+      white-space:nowrap;
+    }
+
+    /* basic link/dropbtn styling */
+    .nav-links a,
+    .dropbtn {
+      color:var(--text);
+      text-decoration:none;
+      font-size:18px;          /* increased font size per request */
+      font-weight:600;
+      padding:10px 16px;
+      border-radius:8px;
+      background:transparent;
+      border:none;
+      cursor:pointer;
+      position:relative;
+      transition:all .22s ease;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+
+    /* small pill underline animation */
+    .nav-links a::after,
+    .dropbtn::after {
+      content:'';
+      position:absolute;
+      left:50%;
+      bottom:6px;
+      transform:translateX(-50%) scaleX(0);
+      transform-origin:center;
+      width:48%;
+      height:3px;
+      background:var(--accent);
+      transition:transform .22s ease;
+      border-radius:3px;
+    }
+    .nav-links a:hover::after,
+    .dropbtn:hover::after,
+    .dropdown.open > .dropbtn::after {
+      transform:translateX(-50%) scaleX(1);
+    }
+
+    /* hover glow & slight lift */
+    .nav-links a:hover,
+    .dropbtn:hover {
+      background: rgba(255,204,0,0.12);
+      box-shadow: 0 6px 18px rgba(255,204,0,0.12);
+      transform:translateY(-3px);
+    }
+
+    /* Dropdown layout */
+    .dropdown {
+      position:relative;
+      display:inline-block;
+      user-select:none;
+    }
+
+    .dropbtn .arrow {
+      font-size:13px;
+      display:inline-block;
+      transition: transform .22s ease, color .22s ease;
+    }
+
+    /* rotate arrow when dropdown open/hover */
+    .dropdown:hover .arrow,
+    .dropdown.open .arrow {
+      transform:rotate(180deg);
+      color:var(--accent);
+    }
+
+    /* Dropdown menu (card-like) */
+    .dropdown-content {
+      display:none;               /* base hidden; shown via hover (CSS) or .open class (JS) */
+      position:absolute;
+      top:calc(100% + 12px);
+      right:0;
+      min-width:260px;
+      background:rgba(255,255,255,0.95);
+      box-shadow:0 20px 40px rgba(13,13,13,0.12);
+      border-radius:12px;
+      border:1px solid rgba(0,0,0,0.04);
+      overflow:hidden;
+      z-index:999;
+      transform-origin:top center;
+      opacity:0;
+      pointer-events:none;
+      transform:translateY(-6px);
+      transition:opacity .24s ease, transform .24s ease;
+    }
+
+    .dropdown-content a {
+      display:block;
+      padding:12px 16px;
+      font-size:16px;
+      font-weight:500;
+      text-decoration:none;
+      color:#222;
+      border-bottom:1px solid rgba(0,0,0,0.03);
+      transition:background .14s ease, color .14s ease;
+    }
+    .dropdown-content a:last-child{ border-bottom:0; }
+
+    .dropdown-content a:hover {
+      background:var(--accent);
+      color:#000;
+    }
+
+    /* Show dropdown on desktop hover */
+    @media (hover: hover) and (pointer: fine) {
+      .dropdown:hover .dropdown-content {
+        display:block;
+        opacity:1;
+        pointer-events:auto;
+        transform:translateY(0);
+      }
+    }
+
+    /* JS-driven "open" class for click / touch devices:
+       ensures dropdown-content shows when .open is present regardless of hover availability */
+    .dropdown.open > .dropdown-content {
+      display:block;
+      opacity:1;
+      pointer-events:auto;
+      transform:translateY(0);
+    }
+
+    /* Responsive: collapse into vertical stack on small screens */
+    @media screen and (max-width:900px){
+      .navbar{
+        padding:12px 18px;
+        gap:12px;
+      }
+      .nav-links{
+        position:relative;
+      }
+      .nav-toggle{
+        display:inline-flex;
+        background:transparent;
+        border:0;
+        cursor:pointer;
+        font-size:20px;
+      }
+      /* initially hide nav-links items on mobile and reveal via JS toggler */
+      .nav-links-inner{
+        display:none;
+        flex-direction:column;
+        gap:8px;
+        width:100%;
+        margin-top:8px;
+        background:transparent;
+      }
+      .nav-links-inner.show{
+        display:flex;
+      }
+      .nav-links a,
+      .dropbtn{
+        width:100%;
+        text-align:left;
+        padding:12px 14px;
+        border-radius:10px;
+      }
+      .dropdown-content{
+        position:static;
+        transform:none;
+        opacity:1;
+        pointer-events:auto;
+        box-shadow:none;
+        margin-left:8px;
+        margin-right:8px;
+        background:#fffef0;
+        border-radius:8px;
+        border:1px solid rgba(0,0,0,0.03);
+      }
+    }
+
+    /* small helper to make dropdown list more visible on wide layouts */
+    .dropdown .menu-title{
+      padding-right:6px;
+    }
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar" aria-label="Primary">
+  <div class="logo" aria-hidden="true">
+    <!-- keep your logo image name or replace with text fallback -->
+    <img src="logo.png" alt="Logo" onerror="this.style.display='none'"/>
+    <div style="display:flex;flex-direction:column;">
+      <span style="font-weight:700;font-size:18px;line-height:1">ACIC CBIT</span>
+      <small style="color:#666;font-size:12px">Innovation Hub</small>
+    </div>
   </div>
 
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="program.html">Programs</a>
-    <a href="events.html">Events</a>
+  <!-- mobile toggle (visible under 900px) -->
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navInner" title="Toggle menu" style="display:none">
+    ☰
+  </button>
 
-    <div class="dropdown">
-      <a class="dropbtn">
-        For Innovators & Startups <span class="arrow">▼</span>
-      </a>
-      <div class="dropdown-content">
-        <a href="startup.html">Startups & Innovators</a>
-        <a href="pre-incubation.html">Pre-incubation</a>
-        <a href="incubation.html">Incubation</a>
+  <div class="nav-links" role="menubar" aria-label="Main menu">
+    <div id="navInner" class="nav-links-inner" style="display:flex;align-items:center;gap:18px;">
+      <a href="index.html" role="menuitem">Home</a>
+      <a href="about.html" role="menuitem">About Us</a>
+      <a href="program.html" role="menuitem">Programs</a>
+      <a href="events.html" role="menuitem">Events</a>
+
+      <!-- Dropdown: Innovators & Startups -->
+      <div class="dropdown" data-dropdown>
+        <button class="dropbtn" aria-haspopup="true" aria-expanded="false" type="button">
+          <span class="menu-title">For Innovators &amp; Startups</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-content" role="menu" aria-label="For Innovators & Startups submenu">
+          <a href="startup.html" role="menuitem">Startups & Innovators</a>
+          <a href="pre-incubation.html" role="menuitem">Pre-incubation</a>
+          <a href="incubation.html" role="menuitem">Incubation</a>
+        </div>
       </div>
-    </div>
 
-    <div class="dropdown">
-      <a class="dropbtn">
-        Resources <span class="arrow">▼</span>
-      </a>
-      <div class="dropdown-content">
-        <a href="mentors.html">Mentors</a>
-        <a href="makers-space.html">Makers Space / Sector Specific Space</a>
-        <a href="makers-community.html">Makers Community</a>
-        <a href="coworking.html">Coworking Facility</a>
+      <!-- Dropdown: Resources -->
+      <div class="dropdown" data-dropdown>
+        <button class="dropbtn" aria-haspopup="true" aria-expanded="false" type="button">
+          <span class="menu-title">Resources</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-content" role="menu" aria-label="Resources submenu">
+          <a href="mentors.html" role="menuitem">Mentors</a>
+          <a href="makers-space.html" role="menuitem">Makers Space / Sector Specific Space</a>
+          <a href="makers-community.html" role="menuitem">Makers Community</a>
+          <a href="coworking.html" role="menuitem">Coworking Facility</a>
+        </div>
       </div>
-    </div>
 
-    <a href="contact.html">Contact</a>
+      <a href="contact.html" role="menuitem">Contact</a>
+    </div>
   </div>
 </nav>
 
-<style>
-/* Whole Navbar */
-.navbar {
-  width: 100%;
-  background: linear-gradient(90deg, #ffffff, #f7f7f7, #fff4cc);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
-  padding: 14px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+<script>
+  // Minimal JS to handle dropdown click/touch and mobile menu
+  (function(){
+    const dropdowns = document.querySelectorAll('[data-dropdown]');
+    const doc = document.documentElement;
 
-/* Logo Section */
-.logo img {
-  height: 60px;
-  width: auto;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
+    // Toggle handlers for dropdowns (click -> open/close)
+    dropdowns.forEach(dd => {
+      const btn = dd.querySelector('.dropbtn');
+      const menu = dd.querySelector('.dropdown-content');
 
-.logo img:hover {
-  transform: scale(1.05);
-}
+      // click toggles open state
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const isOpen = dd.classList.toggle('open');
+        // set aria-expanded for accessibility
+        btn.setAttribute('aria-expanded', String(isOpen));
+        // close others
+        dropdowns.forEach(other => {
+          if(other !== dd) {
+            other.classList.remove('open');
+            const otherBtn = other.querySelector('.dropbtn');
+            if(otherBtn) otherBtn.setAttribute('aria-expanded','false');
+          }
+        });
+      });
+    });
 
-/* Nav Links Layout */
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
+    // Close on outside click/tap
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('[data-dropdown]')) {
+        dropdowns.forEach(dd => {
+          dd.classList.remove('open');
+          const btn = dd.querySelector('.dropbtn');
+          if(btn) btn.setAttribute('aria-expanded','false');
+        });
+      }
+    });
 
-/* Basic Link & Button Styles */
-.nav-links a,
-.dropbtn {
-  color: #111;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 600;
-  padding: 10px 18px;
-  border-radius: 6px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
+    // Keyboard: ESC closes everything
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' || e.key === 'Esc') {
+        dropdowns.forEach(dd => {
+          dd.classList.remove('open');
+          const btn = dd.querySelector('.dropbtn');
+          if(btn) btn.setAttribute('aria-expanded','false');
+        });
+      }
+    });
 
-/* Creative hover underline */
-.nav-links a::after,
-.dropbtn::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 4px;
-  transform: translateX(-50%) scaleX(0);
-  transform-origin: center;
-  width: 50%;
-  height: 2px;
-  background: #ffcc00;
-  transition: transform 0.3s ease;
-}
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navInner = document.getElementById('navInner');
 
-.nav-links a:hover::after,
-.dropbtn:hover::after {
-  transform: translateX(-50%) scaleX(1);
-}
+    function applyMobileUI() {
+      const isMobile = window.matchMedia('(max-width:900px)').matches;
+      if(isMobile){
+        navToggle.style.display = 'inline-flex';
+        navInner.classList.remove('show'); // start collapsed
+        navToggle.setAttribute('aria-expanded','false');
+      } else {
+        navToggle.style.display = 'none';
+        navInner.classList.remove('show');
+      }
+    }
+    applyMobileUI();
+    window.addEventListener('resize', applyMobileUI);
 
-/* Hover effect + glow */
-.nav-links a:hover,
-.dropbtn:hover {
-  background: rgba(255, 204, 0, 0.15);
-  box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
-  color: #000;
-}
+    if(navToggle){
+      navToggle.addEventListener('click', () => {
+        navInner.classList.toggle('show');
+        const expanded = navInner.classList.contains('show');
+        navToggle.setAttribute('aria-expanded', String(expanded));
+      });
+    }
 
-/* Dropdown styling */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
+    // Prevent accidental focus-out closing while interacting with menu
+    // (keeps menu stable when moving pointer inside)
+    document.querySelectorAll('.dropdown-content').forEach(menu=>{
+      menu.addEventListener('click', (e)=> e.stopPropagation());
+    });
 
-/* Dropdown Arrow */
-.arrow {
-  font-size: 14px;
-  transition: transform 0.3s ease;
-}
+  })();
+</script>
 
-.dropdown:hover .arrow {
-  transform: rotate(180deg);
-}
-
-/* Dropdown Menu */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background: #fff;
-  min-width: 230px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
-  top: 100%;
-  margin-top: 10px;
-  overflow: hidden;
-  z-index: 999;
-}
-
-.dropdown-content a {
-  color: #222;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  font-size: 16px;
-  font-weight: 500;
-  transition: all 0.2s ease;
-}
-
-.dropdown-content a:hover {
-  background: #ffcc00;
-  color: #000;
-}
-
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-  animation: fadeIn 0.3s ease forwards;
-}
-
-/* Dropdown animation */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-5px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive Design */
-@media screen and (max-width: 900px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    padding: 12px 20px;
-  }
-
-  .logo {
-    margin-bottom: 10px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-  }
-
-  .nav-links a,
-  .dropbtn {
-    width: 100%;
-    text-align: center;
-    font-size: 18px;
-    padding: 14px;
-  }
-
-  .dropdown-content {
-    position: static;
-    box-shadow: none;
-    background: #fffef0;
-    border-radius: 0;
-    margin-top: 0;
-  }
-
-  .dropdown-content a {
-    border-top: 1px solid #eee;
-  }
-}
-</style>
+</body>
+</html>

@@ -2,55 +2,198 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Makerspace & Sector-Specific Labs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Makers Space - ACIC CBIT</title>
+    <style>
+        body {
+            background: linear-gradient(115deg, #e7fcf5 40%, #f7fafd 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+        }
+        .container {
+            max-width: 1180px;
+            margin: 40px auto;
+            padding: 32px;
+            background: rgba(255,255,255,0.97);
+            border-radius: 1.2rem;
+            box-shadow: 0 8px 36px rgba(72,102,225,0.09);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.8rem;
+            letter-spacing: 2px;
+            color: #25316c;
+            margin-bottom: 2.6rem;
+            font-weight: 700;
+        }
+        .equipment-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+            gap: 2.1rem;
+        }
+        .equip-card {
+            background: linear-gradient(135deg, #e3faf4 66%, #f4f3fa 100%);
+            border-radius: 1.2rem;
+            box-shadow: 0 3px 15px rgba(30,48,151,0.11);
+            padding: 1.6rem 1.1rem 1.3rem 1.1rem;
+            transition: transform 0.22s, box-shadow 0.22s;
+            position: relative;
+            min-height: 270px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .equip-card:hover {
+            transform: translateY(-7px) scale(1.025);
+            box-shadow: 0 12px 32px rgba(67,107,232,0.19);
+        }
+        .equip-img {
+            width: 65px;
+            height: 65px;
+            object-fit: cover;
+            border-radius: 13px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 12px rgba(87,141,199,0.10);
+            background: #e0f8ec;
+        }
+        .equip-title {
+            font-size: 1.17rem;
+            font-weight: 600;
+            color: #24397a;
+            margin-bottom: 8px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        .equip-desc {
+            font-size: 1rem;
+            color: #516495;
+            margin-bottom: 12px;
+            text-align: center;
+            min-height: 42px;
+        }
+        .apply-btn {
+            color: #fff;
+            background: linear-gradient(90deg, #37b4e2 10%, #1b9fc1 90%);
+            padding: 10px 24px;
+            border-radius: 1.1rem;
+            border: none;
+            font-weight: 600;
+            box-shadow: 0 3px 12px rgba(67,107,232,0.13);
+            font-size: 1.05rem;
+            cursor: pointer;
+            margin-top: 26px;
+            transition: background 0.21s;
+        }
+        .apply-btn:hover {
+            background: linear-gradient(90deg, #179abd 10%, #23a6e2 90%);
+        }
+        .section-footer {
+            margin-top: 44px;
+            text-align: center;
+            font-size: 1.09rem;
+            color: #27439d;
+        }
+        @media (max-width: 900px) {
+            .container {
+                padding: 12px;
+            }
+            h1 {
+                font-size: 2.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <!-- navigation section -->
-        <section id ='navigation'>
-  <!-- Placeholder for nav -->
-  <div id="nav"></div>
-        </section>
-            <!-- end  of  navigation  section -->
+    <div class="container">
+        <h1>Makerspace & Sector-Specific Labs</h1>
+        <div class="equipment-list">
+            <!-- Equipment Card 1 -->
+            <div class="equip-card">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=200&q=80" alt="Function Generator" class="equip-img">
+                <div class="equip-title">TEKTRONIX 2-Channel Function Generator</div>
+                <div class="equip-desc">
+                    60MHz bandwidth, 300MSa/s sampling rate for precise signal generation and analysis.
+                </div>
+            </div>
+            <!-- Equipment Card 2 -->
+            <div class="equip-card">
+                <img src="https://images.unsplash.com/photo-1455167241138-8882dcfa53aa?w=200&q=80" alt="UGV Kits" class="equip-img">
+                <div class="equip-title">UGV Assembly Kits</div>
+                <div class="equip-desc">
+                    Create unmanned ground vehicles for robotics exploration and automation projects.
+                </div>
+            </div>
+            <!-- Equipment Card 3 -->
+            <div class="equip-card">
+                <img src="https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=200&q=80" alt="UAV Kits" class="equip-img">
+                <div class="equip-title">UAV Assembly Kits</div>
+                <div class="equip-desc">
+                    Design and assemble custom drones for aerial experiments and innovation.
+                </div>
+            </div>
+            <!-- Equipment Card 4 -->
+            <div class="equip-card">
+                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=200&q=80" alt="Laser Engraver" class="equip-img">
+                <div class="equip-title">CO2 Laser Engraver & Cutting Machine</div>
+                <div class="equip-desc">
+                    High-precision laser cutting and engraving for rapid prototyping and creative design.
+                </div>
+            </div>
+            <!-- Equipment Card 5 -->
+            <div class="equip-card">
+                <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?w=200&q=80" alt="FLIR Camera" class="equip-img">
+                <div class="equip-title">FLIR C5 Compact Thermal Camera</div>
+                <div class="equip-desc">
+                    Advanced thermal imaging for diagnostics and analyzing heat patterns in electronics.
+                </div>
+            </div>
+            <!-- Equipment Card 6 -->
+            <div class="equip-card">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=200&q=80" alt="Oscilloscope" class="equip-img">
+                <div class="equip-title">Digital & Mixed Signal Oscilloscopes</div>
+                <div class="equip-desc">
+                    Latest Tektronix models with differential & current probes for comprehensive testing.
+                </div>
+            </div>
+            <!-- Equipment Card 7 -->
+            <div class="equip-card">
+                <img src="https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?w=200&q=80" alt="3D Printer" class="equip-img">
+                <div class="equip-title">Single Extruder 3D Printer</div>
+                <div class="equip-desc">
+                    Rapid prototype development with reliable 3D printing for various materials.
+                </div>
+            </div>
+            <!-- Equipment Card 8 -->
+            <div class="equip-card">
+                <img src="https://images.unsplash.com/photo-1465101178521-c1a2fa1746b7?w=200&q=80" alt="Soldering Kits" class="equip-img">
+                <div class="equip-title">Soldering & Desoldering Kits</div>
+                <div class="equip-desc">
+                    Complete kits for professional circuit assembly and repair work.
+                </div>
+            </div>
+            <!-- Equipment Card 9 -->
+            <div class="equip-card">
+                <img src="https://images.unsplash.com/photo-1468421870903-4df1664ac249?w=200&q=80" alt="Multimeter" class="equip-img">
+                <div class="equip-title">Digital Multimeter & Temp Probes</div>
+                <div class="equip-desc">
+                    Keithley make, with precise measurement and temperature probes.
+                </div>
+            </div>
+            <!-- Equipment Card 10 -->
+            <div class="equip-card">
+                <img src="https://images.unsplash.com/photo-1454329001438-534c5b2c7c65?w=200&q=80" alt="Power Meter" class="equip-img">
+                <div class="equip-title">Digital Power Meter</div>
+                <div class="equip-desc">
+                    Direct AC/DC voltage cables and current clamps — advanced power analysis (Yokogawa).
+                </div>
+            </div>
+        </div>
+        <div class="section-footer">
+            <p>
+                Want to use our Makerspace equipment?<br>
+                <a href="https://acic-cbit.in/equipment-form.php"><button class="apply-btn">Apply Here</button></a>
+            </p>
+        </div>
     </div>
-    
-    <div>
-        <!--makers-space section -->
-        <section id ="makers-space">
-            <h1>Makers Space</h1>
-            <p>Information about our makers space will be displayed here.</p>
-        </section>
-        <!--end of makers-space section-->
-    </div>
-
-    <div>
-        <!-- footer section -->
-         <section id ="footer">
-            <!-- Placeholder for footer -->
-            <div id="footer-content"></div>
-         </section>
-         <!-- end of  footer section -->
-    </div>
-
-    <!-- Load Navigation and Footer -->
-    <script>
-        // Load nav.html into this page
-        fetch("nav.html")
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById("nav").innerHTML = data;
-          })
-          .catch(error => console.error('Error loading navigation:', error));
-
-        // Load footer.html into this page
-        fetch("footer.html")
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById("footer-content").innerHTML = data;
-          })
-          .catch(error => console.error('Error loading footer:', error));
-    </script>
-    
 </body>
 </html>

@@ -2,55 +2,155 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Our Mentors</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentors - ACIC CBIT</title>
+    <style>
+        body {
+            background: linear-gradient(110deg, #e7fcfb 40%, #f7fafd 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+        }
+        .container {
+            max-width: 1180px;
+            margin: 40px auto;
+            padding: 32px;
+            background: rgba(255,255,255,0.97);
+            border-radius: 1.2rem;
+            box-shadow: 0 8px 36px rgba(72,102,225,0.09);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.8rem;
+            letter-spacing: 2px;
+            color: #25316c;
+            margin-bottom: 2.6rem;
+            font-weight: 700;
+        }
+        .mentor-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+            gap: 2.1rem;
+        }
+        .mentor-card {
+            background: linear-gradient(135deg, #e3faf4 66%, #f4f3fa 100%);
+            border-radius: 1.2rem;
+            box-shadow: 0 3px 15px rgba(30,48,151,0.11);
+            padding: 1.6rem 1.1rem 1.3rem 1.1rem;
+            transition: transform 0.22s, box-shadow 0.22s;
+            position: relative;
+            min-height: 270px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .mentor-card:hover {
+            transform: translateY(-7px) scale(1.025);
+            box-shadow: 0 12px 32px rgba(67,107,232,0.19);
+        }
+        .mentor-img {
+            width: 68px;
+            height: 68px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 12px rgba(87,141,199,0.12);
+            background: #e0f8ec;
+        }
+        .mentor-name {
+            font-size: 1.19rem;
+            font-weight: 600;
+            color: #24397a;
+            margin-bottom: 7px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        .mentor-role {
+            font-size: 1.01rem;
+            color: #50638b;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+        .mentor-desc {
+            font-size: 0.99rem;
+            color: #6a7da1;
+            margin-bottom: 10px;
+            text-align: center;
+            min-height: 38px;
+        }
+        .connect-btn {
+            color: #fff;
+            background: linear-gradient(90deg, #27aab0 10%, #357de2 90%);
+            padding: 8px 22px;
+            border-radius: 1.1rem;
+            border: none;
+            font-weight: 600;
+            font-size: 1.01rem;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(67,117,232,0.13);
+            margin-top: auto;
+            transition: background 0.18s;
+        }
+        .connect-btn:hover {
+            background: linear-gradient(90deg, #186b8b 10%, #2358e2 90%);
+        }
+        .section-footer {
+            margin-top: 44px;
+            text-align: center;
+            font-size: 1.09rem;
+            color: #27439d;
+        }
+        @media (max-width: 900px) {
+            .container {
+                padding: 12px;
+            }
+            h1 {
+                font-size: 2.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <!-- navigation section -->
-        <section id ='navigation'>
-  <!-- Placeholder for nav -->
-  <div id="nav"></div>
-        </section>
-            <!-- end  of  navigation  section -->
+    <div class="container">
+        <h1>Meet Our Mentors</h1>
+        <div class="mentor-list">
+            <!-- Mentor Card 1 -->
+            <div class="mentor-card">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Dr G VANITHA" class="mentor-img">
+                <div class="mentor-name">Dr G VANITHA</div>
+                <div class="mentor-role">Assistant Professor<br>CBIT (AI ML & NLP)</div>
+                <div class="mentor-desc">
+                    Expert in Machine Learning & Natural Language Processing, guiding young innovators.
+                </div>
+                <button class="connect-btn">Connect</button>
+            </div>
+            <!-- Mentor Card 2 -->
+            <div class="mentor-card">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Pranav Hebbar" class="mentor-img">
+                <div class="mentor-name">Pranav Hebbar</div>
+                <div class="mentor-role">Founder & CEO<br>Uttunga Ventures</div>
+                <div class="mentor-desc">
+                    Entrepreneur, business strategist, and mentor for startup incubation and scaling.
+                </div>
+                <button class="connect-btn">Connect</button>
+            </div>
+            <!-- Mentor Card 3 -->
+            <div class="mentor-card">
+                <img src="https://randomuser.me/api/portraits/men/19.jpg" alt="Dr Ajay Kumar" class="mentor-img">
+                <div class="mentor-name">Dr AJAY KUMAR</div>
+                <div class="mentor-role">Faculty Advisor<br>CBIT ECE</div>
+                <div class="mentor-desc">
+                    Guides electronics projects, innovations, and international collaboration.
+                </div>
+                <button class="connect-btn">Connect</button>
+            </div>
+            <!-- Add more mentor cards as needed -->
+        </div>
+        <div class="section-footer">
+            <p>
+                Interested in contributing as a mentor?<br>
+                <button class="connect-btn">Join as Mentor</button>
+            </p>
+        </div>
     </div>
-    
-    <div>
-        <!--mentors section -->
-        <section id ="mentors">
-            <h1>Mentors</h1>
-            <p>Information about our mentors will be displayed here.</p>
-        </section>
-        <!--end of mentors section-->
-    </div>
-
-    <div>
-        <!-- footer section -->
-         <section id ="footer">
-            <!-- Placeholder for footer -->
-            <div id="footer-content"></div>
-         </section>
-         <!-- end of  footer section -->
-    </div>
-
-    <!-- Load Navigation and Footer -->
-    <script>
-        // Load nav.html into this page
-        fetch("nav.html")
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById("nav").innerHTML = data;
-          })
-          .catch(error => console.error('Error loading navigation:', error));
-
-        // Load footer.html into this page
-        fetch("footer.html")
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById("footer-content").innerHTML = data;
-          })
-          .catch(error => console.error('Error loading footer:', error));
-    </script>
-    
 </body>
 </html>

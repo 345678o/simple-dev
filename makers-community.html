@@ -2,55 +2,143 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Makers Community - ACIC CBIT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: linear-gradient(110deg, #eafdfc 40%, #f8fafd 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+        }
+        .container {
+            max-width: 1180px;
+            margin: 40px auto;
+            padding: 32px;
+            background: rgba(255,255,255,0.96);
+            border-radius: 1.2rem;
+            box-shadow: 0 8px 36px rgba(72,102,225,0.10);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.7rem;
+            letter-spacing: 1px;
+            color: #23305d;
+            margin-bottom: 2.1rem;
+            font-weight: 700;
+        }
+        .desc-card {
+            background: linear-gradient(135deg, #e9faf9 66%, #f4f5fa 100%);
+            border-radius: 1.2rem;
+            box-shadow: 0 3px 15px rgba(30,48,151,0.12);
+            padding: 2rem;
+            margin-bottom: 2.1rem;
+            color: #264272;
+            font-size: 1.07rem;
+            line-height: 1.7;
+        }
+        .community-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+            gap: 2.1rem;
+            margin-bottom: 2.3rem;
+        }
+        .comm-card {
+            background: linear-gradient(135deg, #e9faf9 66%, #f4f5fa 100%);
+            border-radius: 1.2rem;
+            box-shadow: 0 3px 15px rgba(30,48,151,0.14);
+            padding: 1.6rem 1.1rem 1.3rem 1.1rem;
+            transition: transform 0.22s, box-shadow 0.22s;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .comm-card:hover {
+            transform: translateY(-7px) scale(1.025);
+            box-shadow: 0 12px 32px rgba(67,107,232,0.18);
+        }
+        .comm-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #24397a;
+            margin-bottom: 10px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        .comm-desc {
+            font-size: 0.99rem;
+            color: #6a7da1;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        .connect-btn {
+            color: #fff;
+            background: linear-gradient(90deg, #27aab0 10%, #357de2 90%);
+            padding: 8px 22px;
+            border-radius: 1.1rem;
+            border: none;
+            font-weight: 600;
+            font-size: 1.01rem;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(67,117,232,0.13);
+            margin-top: auto;
+            transition: background 0.19s;
+        }
+        .connect-btn:hover {
+            background: linear-gradient(90deg, #186b8b 0%, #2358e2 100%);
+        }
+        .section-footer {
+            margin-top: 32px;
+            text-align: center;
+            font-size: 1.06rem;
+            color: #26439d;
+        }
+        @media (max-width: 900px) {
+            .container {
+                padding: 12px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <!-- navigation section -->
-        <section id ='navigation'>
-  <!-- Placeholder for nav -->
-  <div id="nav"></div>
-        </section>
-            <!-- end  of  navigation  section -->
+    <div class="container">
+        <h1>Makers Community at ACIC- MLRIT</h1>
+        <div class="desc-card">
+            An innovative platform dedicated to fostering a dynamic community of passionate makers committed to product development.
+            Our initiative thrives on promoting collaboration among makers, innovators, and industries to elevate both processes and products. 
+            This community comes together to support grassroots innovators in helping them build marketable products.
+            Through our DIG-IN (Develop, Innovate & Grow through Industry Nexus) initiative, we actively bridge the gap between students and industries.
+            This synergy leverages fresh student perspectives to identify shortcomings in industrial processes and contribute to potential solutions.
+            Makers within our community play a crucial role in product development and technical documentation, particularly for grassroots innovators and products intended for technology transfer.
+        </div>
+        <div class="community-list">
+            <div class="comm-card">
+                <div class="comm-title">Who can join?</div>
+                <div class="comm-desc">
+                    Students, Faculty, lab technicians, enthusiasts, and professionals passionate about product development, innovation, and collaboration.
+                </div>
+            </div>
+            <div class="comm-card">
+                <div class="comm-title">Why join?</div>
+                <div class="comm-desc">
+                    Engage in a vibrant community, bridge academia and industry, contribute to new products, aid technical documentation, and connect with like-minded innovators.
+                </div>
+            </div>
+            <div class="comm-card">
+                <div class="comm-title">Benefits</div>
+                <div class="comm-desc">
+                    Support grassroots innovators, gain valuable industry insights, play a critical role in technology transfer, and build a strong professional network.
+                </div>
+            </div>
+        </div>
+        <div class="section-footer">
+            Want to get involved?<br>
+            <button class="connect-btn">Join Makers’ Community</button>
+        </div>
     </div>
-    
-    <div>
-        <!--makers-community section -->
-        <section id ="makers-community">
-            <h1>Makers Community</h1>
-            <p>Information about our makers community will be displayed here.</p>
-        </section>
-        <!--end of makers-community section-->
-    </div>
-
-    <div>
-        <!-- footer section -->
-         <section id ="footer">
-            <!-- Placeholder for footer -->
-            <div id="footer-content"></div>
-         </section>
-         <!-- end of  footer section -->
-    </div>
-
-    <!-- Load Navigation and Footer -->
-    <script>
-        // Load nav.html into this page
-        fetch("nav.html")
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById("nav").innerHTML = data;
-          })
-          .catch(error => console.error('Error loading navigation:', error));
-
-        // Load footer.html into this page
-        fetch("footer.html")
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById("footer-content").innerHTML = data;
-          })
-          .catch(error => console.error('Error loading footer:', error));
-    </script>
-    
 </body>
 </html>

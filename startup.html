@@ -1,1 +1,173 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Startups & Innovators</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: linear-gradient(110deg, #e7effd 40%, #f7fafc 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+        }
+        .container {
+            max-width: 1180px;
+            margin: 40px auto;
+            padding: 32px;
+            background: rgba(255,255,255,0.98);
+            border-radius: 1.2rem;
+            box-shadow: 0 8px 36px rgba(72,102,225,0.09);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.8rem;
+            letter-spacing: 2px;
+            color: #25316c;
+            margin-bottom: 2.6rem;
+            font-weight: 700;
+        }
+        .startup-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.1rem;
+        }
+        .startup-card {
+            background: linear-gradient(135deg, #f6fbff 66%, #f2f3fa 100%);
+            border-radius: 1.3rem;
+            box-shadow: 0 3px 15px rgba(30,48,151,0.18);
+            padding: 1.7rem 1.1rem 1.3rem 1.1rem;
+            transition: transform 0.23s, box-shadow 0.23s;
+            position: relative;
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .startup-card:hover {
+            transform: translateY(-7px) scale(1.025);
+            box-shadow: 0 12px 32px rgba(67,107,232,0.23);
+        }
+        .startup-img {
+            width: 75px;
+            height: 75px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin-bottom: 1.05rem;
+            box-shadow: 0 2px 12px rgba(87,141,199,0.10);
+            background: #e3eafc;
+        }
+        .startup-title {
+            font-size: 1.23rem;
+            font-weight: 600;
+            color: #24397a;
+            margin-bottom: 9px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        .startup-desc {
+            font-size: 1.07rem;
+            color: #556495;
+            margin-bottom: 14px;
+            text-align: center;
+            min-height: 46px;
+        }
+        .read-more {
+            margin-top: auto;
+            color: #2464eb;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 1rem;
+            padding: 7px 19px;
+            background: linear-gradient(87deg, #cfdaf8 0%, #eaf0fa 100%);
+            box-shadow: 0 1px 7px rgba(30,48,151,0.08);
+            transition: background 0.21s, color 0.21s;
+        }
+        .read-more:hover {
+            background: linear-gradient(87deg, #bedafa 0%, #d0e8ff 100%);
+            color: #2344d5;
+            text-decoration: underline;
+        }
+        .section-footer {
+            margin-top: 44px;
+            text-align: center;
+            font-size: 1.08rem;
+            color: #27439d;
+        }
+        .apply-btn {
+            color: #fff;
+            background: linear-gradient(90deg, #377be2 10%, #1b53c1 90%);
+            padding: 10px 24px;
+            border-radius: 1.1rem;
+            border: none;
+            font-weight: 600;
+            box-shadow: 0 3px 12px rgba(67,107,232,0.13);
+            font-size: 1.05rem;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.21s;
+        }
+        .apply-btn:hover {
+            background: linear-gradient(90deg, #1451bd 10%, #2268e2 90%);
+        }
+        @media (max-width: 900px) {
+            .container {
+                padding: 12px;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Startups & Innovators </h1>
+        <div class="startup-list">
+            <!-- Startup 1 -->
+            <div class="startup-card">
+                <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=200&q=80" alt="Zekelabs Technologies" class="startup-img">
+                <div class="startup-title">Zekelabs Technologies Pvt Ltd</div>
+                <div class="startup-desc">
+                    EdYoda is re-imagining higher education by focusing on job-relevant skills and innovation.
+                </div>
+                <a href="#" class="read-more">Read more</a>
+            </div>
+            <!-- Startup 2 -->
+            <div class="startup-card">
+                <img src="https://images.unsplash.com/photo-1483181957632-8a0e8f7d1a45?w=200&q=80" alt="Bitlyze Technologies" class="startup-img">
+                <div class="startup-title">Bitlyze Technologies Private Limited</div>
+                <div class="startup-desc">
+                    Discover a world of innovation with Bitlyze - your go-to destination for tech-driven solutions.
+                </div>
+                <a href="#" class="read-more">Read more</a>
+            </div>
+            <!-- Startup 3 -->
+            <div class="startup-card">
+                <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=200&q=80" alt="Call My Workers" class="startup-img">
+                <div class="startup-title">Call My Workers</div>
+                <div class="startup-desc">
+                    A tech-enabled platform connecting skilled workers to employers for quick and reliable services.
+                </div>
+                <a href="#" class="read-more">Read more</a>
+            </div>
+            <!-- Startup 4 -->
+            <div class="startup-card">
+                <img src="https://images.unsplash.com/photo-1416339306562-f3d12fefd36f?w=200&q=80" alt="Bdazlai" class="startup-img">
+                <div class="startup-title">Bdazlai</div>
+                <div class="startup-desc">
+                    AI-driven personal care product recommendations tailored to individual needs.
+                </div>
+                <a href="#" class="read-more">Read more</a>
+            </div>
+            <!-- Add more startup cards as needed -->
+        </div>
+        <div class="section-footer">
+            <p>
+                Interested in becoming an innovator or startup?<br>
+                <button class="apply-btn">Apply Now</button>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

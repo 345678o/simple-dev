@@ -30,32 +30,28 @@
                 <button class="slider-button prev">❮</button>
                 <button class="slider-button next">❯</button>
             </div>
-        </section> s
+        </section>
         <!--end of header section-->
-    </div>
-    <div>
-        <!--navigation section-->
-        
-        <!-- end of navigation  section -->
-    </div>
-    
-   <div>
+    <div class="about-section">
     <!--about section-->
     <section id="about">
         <div class="about-container">
-            <h1>About ACIC-CBIT</h1>
+            <h1 class="section-title">About <span>ACIC-CBIT</span></h1>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">Empowering Innovation & Entrepreneurship</p>
+            
             <div class="about-content">
                 <div class="about-text">
                     <p class="about-intro">
-                        Atal Innovation Mission (AIM) at NITI Aayog is mandated to promote a culture of innovation and entrepreneurship in India. AIM has selected a number of institutions for supporting them in establishing the Atal Community Innovation Centers (ACICs). CBIT has been selected from Telangana by AIM and received approval for the establishment of Atal Community Innovation Centre (ACIC) at CBIT Campus.
+                        Atal Innovation Mission (AIM) at NITI Aayog is mandated to promote a culture of innovation and entrepreneurship in India. AIM has selected a number of institutions for establishing Atal Community Innovation Centers (ACICs). CBIT has been selected from Telangana by AIM for setting up an Atal Community Innovation Centre (ACIC) at CBIT Campus.
                     </p>
                     
                     <p>
-                        ACIC-CBIT Research and Entrepreneurship Foundation, a registered section 8 company, is a Special Purpose Vehicle (SPV) promoted by CBIT. ACIC-CBIT provides requisite infrastructure and resources for innovators in the unserved / underserved regions.
+                        ACIC-CBIT Research and Entrepreneurship Foundation, a registered Section 8 company, serves as a Special Purpose Vehicle (SPV) promoted by CBIT. We provide essential infrastructure and resources for innovators, particularly in unserved and underserved regions.
                     </p>
 
                     <p>
-                        ACIC-CBIT aligns their activities to engage a large number of grassroot innovators, communities, students and academicians in various innovation and entrepreneurship related activities such as ideation, Problem solving, Proof of Concept development, Design Thinking, IPR etc. The ACIC-CBIT will connect with other stakeholders at various platforms to accelerate the implementation of the activities under ACIC-CBIT.
+                        Our center engages grassroot innovators, communities, students, and academicians in various innovation and entrepreneurship activities, including ideation, problem-solving, Proof of Concept development, Design Thinking, and IPR. ACIC-CBIT actively connects with stakeholders across multiple platforms to accelerate the implementation of innovative solutions.
                     </p>
                 </div>
                 
@@ -63,30 +59,184 @@
                     <div class="feature-card">
                         <div class="feature-icon">🚀</div>
                         <h3>Innovation Hub</h3>
-                        <p>State-of-the-art facilities for fostering innovation and creativity</p>
+                        <p>State-of-the-art facilities for fostering innovation and creativity with modern infrastructure and tools.</p>
                     </div>
                     
                     <div class="feature-card">
                         <div class="feature-icon">🎯</div>
                         <h3>Community Focus</h3>
-                        <p>Serving unserved and underserved regions with targeted solutions</p>
+                        <p>Dedicated to serving unserved and underserved regions with targeted, impactful solutions.</p>
                     </div>
                     
                     <div class="feature-card">
                         <div class="feature-icon">🤝</div>
                         <h3>Stakeholder Network</h3>
-                        <p>Connecting innovators with industry, academia, and government</p>
+                        <p>Bridging the gap between innovators, industry leaders, academia, and government bodies.</p>
                     </div>
                     
                     <div class="feature-card">
                         <div class="feature-icon">💡</div>
                         <h3>Design Thinking</h3>
-                        <p>Promoting human-centered design approaches for problem solving</p>
+                        <p>Championing human-centered design methodologies for effective problem-solving.</p>
                     </div>
                 </div>
             </div>
         </div>
-        </section>
+    </section>
+    <style>
+        /* Section Base Styling */
+        section {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* About Section Styling */
+        .about-section {
+            padding: 0 0 40px;
+            background-color: #f9f9f9;
+            margin: 0;
+        }
+        
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin: 0 0 10px 0;
+            text-align: center;
+            font-weight: 700;
+            padding: 20px 0 10px;
+            line-height: 1.2;
+        }
+        
+        .section-title span {
+            color: #e74c3c;
+        }
+        
+        .section-divider {
+            width: 80px;
+            height: 3px;
+            background: #e74c3c;
+            margin: 0 auto 20px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            text-align: center;
+            padding: 0 20px 10px;
+            line-height: 1.4;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: flex-start;
+            padding: 0 20px;
+        }
+        
+        .about-text p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: #e74c3c;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1);
+        }
+        
+        .feature-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .feature-card p {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-features {
+                margin-top: 30px;
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .about-section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .feature-card {
+                padding: 25px 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .section-subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
   
         <!--end of about section-->
     </div>
@@ -104,15 +254,11 @@ To provide directional training and mentorship with infrastructural and Adoptive
             </p>
 
 </section>
-    </div>
-     <br>
-     <div>
+    <div style="margin-top: -20px;">
         <!--Objectives section -->
         <section id ="Objectives">
-            <h2>
-               Our Objectives
-            </h2>
-            <pre>
+            <h2 style="margin-top: 0; padding-top: 20px;">Our Objectives</h2>
+            <pre style="margin-top: 10px;">
 ACIC CBIT vision is to encourage a spirit of entrepreneurship in the underserved/unserved regions by providing enabling infrastructure and facilitating an environment for innovations
 
 To build an Innovative mindset and the need for entrepreneurship among the community.
@@ -129,7 +275,7 @@ To provide necessary support services, such as Legal, IPR, Funding and Market Ac
     <div>
         <!-- sdgb goals section-->
         <section id ="sdg">
-            <h2>Targeted SDG's</h2>
+            <h2 style="margin-top: 0; padding-top: 20px;">Targeted SDG's</h2>
             <p>We support ideas and innovations working toward the Sustainable
 Development Goals (SDG's)</p>
 <img src="sdg.jpg" alt="sdg-goals" width="800px" height="400px">
@@ -137,9 +283,9 @@ Development Goals (SDG's)</p>
     </div>
     <div>
         <!--gallery section -->
-        <setion id ="gallery">
+        <section id ="gallery">
 
-            <h2>ACIC - CBIT's Ledaership Team</h2>
+            <h2>ACIC - CBIT's Leadership Team</h2>
             <h2>CORE Team of ACIC</h2>
             <h2>ACIC - CBIT's Advisory Committee</h2>
             <p>
@@ -158,11 +304,13 @@ Committed to fostering innovation within unserved and underserved communities, t
             <div class="testimonials-container">
                 <div class="testimonial-video active" data-video="testimonial1">
                     <div class="video-wrapper">
-                        <video controls poster="testimonial1-poster.jpg">
-                            <source src="testimonial1.mp4" type="video/mp4">
-                            <source src="testimonial1.webm" type="video/webm">
-                            Your browser does not support the video tag.
-                        </video>
+                        <div class="video-placeholder">
+                            <img src="https://via.placeholder.com/800x450/2c3e50/ffffff?text=Testimonial+1" alt="Testimonial 1" class="placeholder-image">
+                            <div class="play-overlay">
+                                <i class="fas fa-play-circle"></i>
+                                <p>Click to play testimonial</p>
+                            </div>
+                        </div>
                         <div class="video-overlay">
                             <button class="play-button" onclick="togglePlay(this)">
                                 <i class="fas fa-play"></i>
@@ -181,11 +329,13 @@ Committed to fostering innovation within unserved and underserved communities, t
 
                 <div class="testimonial-video" data-video="testimonial2">
                     <div class="video-wrapper">
-                        <video controls poster="testimonial2-poster.jpg">
-                            <source src="testimonial2.mp4" type="video/mp4">
-                            <source src="testimonial2.webm" type="video/webm">
-                            Your browser does not support the video tag.
-                        </video>
+                        <div class="video-placeholder">
+                            <img src="https://via.placeholder.com/800x450/3498db/ffffff?text=Testimonial+2" alt="Testimonial 2" class="placeholder-image">
+                            <div class="play-overlay">
+                                <i class="fas fa-play-circle"></i>
+                                <p>Click to play testimonial</p>
+                            </div>
+                        </div>
                         <div class="video-overlay">
                             <button class="play-button" onclick="togglePlay(this)">
                                 <i class="fas fa-play"></i>
@@ -204,11 +354,13 @@ Committed to fostering innovation within unserved and underserved communities, t
 
                 <div class="testimonial-video" data-video="testimonial3">
                     <div class="video-wrapper">
-                        <video controls poster="testimonial3-poster.jpg">
-                            <source src="testimonial3.mp4" type="video/mp4">
-                            <source src="testimonial3.webm" type="video/webm">
-                            Your browser does not support the video tag.
-                        </video>
+                        <div class="video-placeholder">
+                            <img src="https://via.placeholder.com/800x450/2ecc71/ffffff?text=Testimonial+3" alt="Testimonial 3" class="placeholder-image">
+                            <div class="play-overlay">
+                                <i class="fas fa-play-circle"></i>
+                                <p>Click to play testimonial</p>
+                            </div>
+                        </div>
                         <div class="video-overlay">
                             <button class="play-button" onclick="togglePlay(this)">
                                 <i class="fas fa-play"></i>
@@ -316,6 +468,79 @@ Committed to fostering innovation within unserved and underserved communities, t
     </script>
     <!-- End Slider JavaScript -->
            <style>
+            /* Add Font Awesome for icons */
+            @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+            
+            /* Video Placeholder Styles */
+            .video-placeholder {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                background: #f0f0f0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                overflow: hidden;
+            }
+            
+            .placeholder-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+            
+            .video-placeholder:hover .placeholder-image {
+                transform: scale(1.05);
+            }
+            
+            .play-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.3);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                opacity: 1;
+                transition: opacity 0.3s ease;
+            }
+            
+            .play-overlay i {
+                font-size: 60px;
+                margin-bottom: 10px;
+                text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            }
+            
+            .play-overlay p {
+                font-size: 16px;
+                margin: 0;
+                text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+            }
+            
+            .video-wrapper {
+                position: relative;
+                width: 100%;
+                height: 0;
+                padding-bottom: 56.25%; /* 16:9 aspect ratio */
+                background: #000;
+                overflow: hidden;
+            }
+            
+            .video-wrapper > * {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
             /* Slider styles */
             .slider-container {
                 position: relative;
@@ -912,16 +1137,35 @@ Committed to fostering innovation within unserved and underserved communities, t
             }
 
             /* Responsive styles */
-            @media screen and (max-width: 768px) {
-                section {
-                    width: 95%;
-                    padding: 15px;
-                }
+            /* Reset default margins and padding */
+            body, html {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                overflow-x: hidden;
+            }
 
+            /* Make all sections full width */
+            section {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 15px 0 !important;
+                margin: 0 !important;
+                box-sizing: border-box;
+            }
+
+            /* Update container widths */
+            .about-container, .testimonials-container {
+                max-width: 100% !important;
+                margin: 0 auto;
+                padding: 0 15px;
+                box-sizing: border-box;
+            }
+
+            @media screen and (max-width: 768px) {
                 h1 { font-size: 2em; }
                 h2 { font-size: 1.6em; }
                 h3 { font-size: 1.4em; }
-
                 p, pre {
                     font-size: 1em;
                 }
